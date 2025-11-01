@@ -1,0 +1,27 @@
+{
+  "name": "Bonmets – Les meilleures recettes pour toutes les occasions",
+  "short_name": "Bonmets",
+  "description": "Découvrez des centaines de délicieuses recettes pour le petit déjeuner, le déjeuner, le dîner et le dessert. Végétarien, végan, sans gluten et bien plus !",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFF8F3",
+  "theme_color": "#FF7A7A",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["food", "cooking", "recipes", "french", "meals", "family"],
+  "lang": "fr",
+  "dir": "ltr"
+}

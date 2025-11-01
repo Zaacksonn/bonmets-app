@@ -1,0 +1,334 @@
+@import "tailwindcss";
+@import "../styles/inline-styles.css";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  
+  /* Soft, warm color palette for food blog */
+  --color-primary: #FF7A7A; /* Soft coral */
+  --color-primary-dark: #FF6B6B;
+  --color-primary-light: #FFB4B4;
+  
+  --color-secondary: #6FCF97; /* Soft sage/mint */
+  --color-secondary-dark: #5FB87E;
+  --color-secondary-light: #A8E6CF;
+  
+  --color-accent: #FFA07A; /* Warm peach */
+  --color-accent-dark: #FF8C61;
+  --color-accent-light: #FFCBA4;
+  
+  --color-warm-bg: #FFF8F3; /* Warm cream background */
+  --color-warm-bg-alt: #FFF5EE;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Global Image Aspect Ratio Protection */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Protect images in MDX content from distortion */
+.recipe-blog-content img,
+.blog-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 2rem 0;
+}
+
+/* Enhanced Typography for Recipe Content */
+.recipe-blog-content h2 {
+  font-family: var(--font-playfair);
+  font-weight: 700;
+  color: #1f2937;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+.recipe-blog-content h3 {
+  font-family: var(--font-playfair);
+  font-weight: 600;
+  color: #374151;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.recipe-blog-content p {
+  font-family: var(--font-lora);
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #374151;
+  margin-bottom: 1.5rem;
+}
+
+.recipe-blog-content strong {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .recipe-blog-content h2 {
+    color: #f9fafb;
+  }
+  
+  .recipe-blog-content h3 {
+    color: #e5e7eb;
+  }
+  
+  .recipe-blog-content p {
+    color: #d1d5db;
+  }
+  
+  .recipe-blog-content strong {
+    color: #f9fafb;
+  }
+}
+
+/* First letter drop cap enhancement */
+.recipe-blog-content p:first-of-type::first-letter {
+  font-family: var(--font-crimson);
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 0.85;
+  float: left;
+  margin-right: 0.75rem;
+  color: #FF7A7A; /* Updated to soft coral */
+}
+
+/* Smooth reading experience */
+.recipe-blog-content {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Blog Content Styles - Magazine Quality Typography */
+.blog-content {
+  color: #374151;
+  line-height: 1.8;
+  font-family: var(--font-lora);
+}
+
+.blog-content h2 {
+  font-family: var(--font-playfair);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+  scroll-margin-top: 100px;
+}
+
+.blog-content h3 {
+  font-family: var(--font-playfair);
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #374151;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  scroll-margin-top: 100px;
+}
+
+.blog-content h4 {
+  font-family: var(--font-inter);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #4b5563;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.blog-content p {
+  font-size: 1.125rem;
+  line-height: 1.9;
+  margin-bottom: 1.75rem;
+}
+
+.blog-content p:first-of-type::first-letter {
+  font-family: var(--font-crimson);
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+  float: left;
+  margin: 0.1em 0.15em 0 0;
+  color: #FF7A7A;
+}
+
+.blog-content strong {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.blog-content em {
+  font-style: italic;
+}
+
+.blog-content ul,
+.blog-content ol {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.blog-content li {
+  margin-bottom: 0.75rem;
+  line-height: 1.8;
+}
+
+.blog-content ul li::marker {
+  color: #FF7A7A;
+}
+
+.blog-content ol li::marker {
+  color: #FF7A7A;
+  font-weight: 600;
+}
+
+.blog-content a {
+  color: #FF7A7A;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s;
+}
+
+.blog-content a:hover {
+  color: #FFA07A;
+}
+
+.blog-content blockquote {
+  border-left: 4px solid #FF7A7A;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: #4b5563;
+  background: linear-gradient(to right, #FFF8F3, transparent);
+  padding: 1.5rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.blog-content code {
+  background: #f3f4f6;
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.9em;
+  font-family: 'Monaco', 'Courier New', monospace;
+  color: #FF7A7A;
+}
+
+.blog-content pre {
+  background: #1f2937;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  margin: 2rem 0;
+}
+
+.blog-content pre code {
+  background: transparent;
+  color: #e5e7eb;
+  padding: 0;
+}
+
+.blog-content hr {
+  border: none;
+  border-top: 2px solid #e5e7eb;
+  margin: 3rem 0;
+}
+
+/* Dark mode blog content */
+@media (prefers-color-scheme: dark) {
+  .blog-content {
+    color: #d1d5db;
+  }
+  
+  .blog-content h2,
+  .blog-content h3 {
+    color: #f9fafb;
+  }
+  
+  .blog-content h4 {
+    color: #e5e7eb;
+  }
+  
+  .blog-content strong {
+    color: #f9fafb;
+  }
+  
+  .blog-content blockquote {
+    color: #d1d5db;
+    background: linear-gradient(to right, rgba(255, 122, 122, 0.1), transparent);
+  }
+  
+  .blog-content code {
+    background: #374151;
+  }
+}
+
+/* Custom gradient utilities for hero section */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
+/* Sticky positioning for recipe ingredients - only on large screens */
+.recipe-ingredients-sticky {
+  position: static;
+  align-self: start;
+  height: fit-content;
+}
+
+@media (min-width: 1024px) {
+  .recipe-ingredients-sticky {
+    position: sticky;
+    top: 2rem;
+  }
+}
+
+/* Print Styles for Recipe Pages */
+@media print {
+  header nav,
+  footer,
+  .no-print,
+  button {
+    display: none !important;
+  }
+  
+  article {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  
+  .bg-gray-50,
+  .bg-gray-800,
+  .bg-gray-900 {
+    background: white !important;
+  }
+  
+  .text-white {
+    color: black !important;
+  }
+}
