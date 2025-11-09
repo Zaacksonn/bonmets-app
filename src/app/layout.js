@@ -115,6 +115,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
         {/* End Google Tag Manager */}
         <meta name="google-site-verification" content="73a51c1ce7036450" />
+        <meta name="impact-site-verification" value="05dea079-9ca8-4df0-9f96-f8dec8ce4710" />
         <meta name="ahrefs-site-verification" content="22d922fdf84d019c19ae72220da6b8c4acf4889a83938c151cdbc09ee00d5aa2" />
       </head>
       <body
