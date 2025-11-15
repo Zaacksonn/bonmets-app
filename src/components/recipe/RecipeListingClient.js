@@ -155,9 +155,9 @@ export default function RecipeListingClient({ initialRecipes, categoryName = nul
               onChange={(e) => setSortBy(e.target.value)}
               className="px-4 py-2.5 border border-gray-300 dark:border-gray-700 rounded-xl bg-white dark:bg-gray-900 focus:ring-2 focus:ring-[#FF7A7A] focus:border-transparent font-medium text-sm transition-all font-inter"
             >
-              <option value="newest">Plus récentes d'abord</option>
+              <option value="newest">Plus récentes d&apos;abord</option>
               <option value="rating">Meilleure note</option>
-              <option value="quickest">Plus rapides d'abord</option>
+              <option value="quickest">Plus rapides d&apos;abord</option>
               <option value="title">Alphabétique</option>
             </select>
           </div>
@@ -234,7 +234,7 @@ export default function RecipeListingClient({ initialRecipes, categoryName = nul
               Aucune recette trouvée
             </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              Essayez d'ajuster vos filtres ou de rechercher autre chose
+              Essayez d&apos;ajuster vos filtres ou de rechercher autre chose
             </p>
             <button
               onClick={() => {
@@ -256,7 +256,7 @@ export default function RecipeListingClient({ initialRecipes, categoryName = nul
               className="text-3xl md:text-4xl font-bold mb-6"
               style={{ fontFamily: "'Playfair Display', 'Georgia', serif" }}
             >
-              Vous n'avez pas trouvé ce que vous cherchiez ?
+              Vous n&apos;avez pas trouvé ce que vous cherchiez ?
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
               Nous ajoutons de nouvelles recettes chaque semaine. Abonnez-vous à notre newsletter pour ne rien manquer !
@@ -266,7 +266,7 @@ export default function RecipeListingClient({ initialRecipes, categoryName = nul
                 href="/"
                 className="inline-flex items-center justify-center px-8 py-3 bg-[#FF7A7A] text-white rounded-full font-semibold hover:bg-[#6FCF97] transition-colors shadow-lg"
               >
-                Retour à l'accueil
+                Retour à l&apos;accueil
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link

@@ -318,7 +318,7 @@ export default function EnhancedHomeClient({
               </p>
               <p>
                 Nous pensons que cuisiner doit être simple et agréable. Chaque <Link href="/recettes" className="text-[#FF7A7A] hover:text-[#6FCF97] font-semibold">recette</Link>
-                comprend des étapes claires, une liste d'ingrédients précise, des informations nutritionnelles et des astuces pratiques.
+                comprend des étapes claires, une liste d&apos;ingrédients précise, des informations nutritionnelles et des astuces pratiques.
                 Du petit déjeuner au dessert – retrouvez <Link href="/categories" className="text-[#FF7A7A] hover:text-[#6FCF97] font-semibold">les catégories</Link> qui facilitent votre cuisine.
               </p>
             </div>
@@ -380,7 +380,7 @@ export default function EnhancedHomeClient({
               </h3>
               <p className="text-gray-600 dark:text-gray-400">
                 Découvrez nos <strong>recettes végétariennes</strong>, options véganes et 
-                plats sans gluten. Nous montrons qu'une alimentation saine peut être à la fois savoureuse et facile à préparer.
+                plats sans gluten. Nous montrons qu&apos;une alimentation saine peut être à la fois savoureuse et facile à préparer.
               </p>
             </motion.div>
 
@@ -429,7 +429,7 @@ export default function EnhancedHomeClient({
                 Conseils pour des repas rapides
               </h3>
               <p className="text-gray-700 dark:text-gray-300 mb-3">
-                Préparez les ingrédients à l'avance pour gagner du temps. Hachez les légumes, marinez la viande et mesurez les épices 
+                Préparez les ingrédients à l&apos;avance pour gagner du temps. Hachez les légumes, marinez la viande et mesurez les épices 
                 avant de commencer à cuisiner. Cela rend la cuisine beaucoup plus rapide et fluide.
               </p>
               <Link href="/plats-rapides" className="text-[#FF7A7A] hover:text-[#6FCF97] font-semibold inline-flex items-center">
@@ -451,7 +451,7 @@ export default function EnhancedHomeClient({
               <p className="text-gray-700 dark:text-gray-300 mb-3">
                 Mesurez toujours les ingrédients avec précision lors de la pâtisserie. Utilisez des ingrédients à température ambiante 
                 pour de meilleurs résultats dans les gâteaux, tartes et pains. 
-                Préchauffez le four bien à l'avance avant de commencer à cuire.
+                Préchauffez le four bien à l&apos;avance avant de commencer à cuire.
               </p>
               <Link href="/categories/kladdkaka-recept" className="text-[#FF7A7A] hover:text-[#6FCF97] font-semibold inline-flex items-center">
                 Voir les recettes de pâtisserie <ArrowRight className="w-4 h-4 ml-1" />
@@ -470,7 +470,7 @@ export default function EnhancedHomeClient({
                 Ajustement des portions
               </h3>
               <p className="text-gray-700 dark:text-gray-300 mb-3">
-                Besoin d'ajuster une recette pour plus ou moins de personnes ? Multipliez ou divisez 
+                Besoin d&apos;ajuster une recette pour plus ou moins de personnes ? Multipliez ou divisez 
                 les ingrédients proportionnellement. Notez que les temps de cuisson peuvent nécessiter un ajustement pour de plus grandes portions.
               </p>
               <Link href="/recettes" className="text-[#FF7A7A] hover:text-[#6FCF97] font-semibold inline-flex items-center">
@@ -556,9 +556,9 @@ export default function EnhancedHomeClient({
                 Y a-t-il des recettes végétariennes et véganes ?
               </h3>
               <p className="text-gray-700 dark:text-gray-300">
-                Oui ! Nous avons une large sélection de <Link href="/categories/vegetariska-recept" className="text-[#FF7A7A] hover:text-[#6FCF97] underline">recettes végétariennes</Link> et d'options véganes. 
+                Oui ! Nous avons une large sélection de <Link href="/categories/vegetariska-recept" className="text-[#FF7A7A] hover:text-[#6FCF97] underline">recettes végétariennes</Link> et d&apos;options véganes. 
                 Utilisez nos filtres pour trouver des <Link href="/categories/vegetariska-recept" className="text-[#FF7A7A] hover:text-[#6FCF97] underline">plats végétariens</Link>, des plats véganes ou 
-                des recettes sans gluten. Nous montrons comment préparer des plats nutritifs et savoureux sans produits d'origine animale, 
+                des recettes sans gluten. Nous montrons comment préparer des plats nutritifs et savoureux sans produits d&apos;origine animale, 
                 parfait pour ceux qui souhaitent manger plus sainement et adopter une alimentation à base de plantes.
               </p>
             </motion.div>
@@ -571,11 +571,11 @@ export default function EnhancedHomeClient({
               className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg"
             >
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                Qu'est-ce qui rend les recettes de Bonmets spéciales ?
+                Qu&apos;est-ce qui rend les recettes de Bonmets spéciales ?
               </h3>
               <p className="text-gray-700 dark:text-gray-300">
                 Toutes nos <strong>recettes françaises</strong> sont soigneusement testées et contiennent des 
-                instructions détaillées étape par étape, des listes d'ingrédients claires, des informations nutritionnelles et 
+                instructions détaillées étape par étape, des listes d&apos;ingrédients claires, des informations nutritionnelles et 
                 des conseils pratiques. Nous nous concentrons sur la cuisine maison avec des ingrédients que vous trouvez dans les 
                 épiceries françaises. Nos recettes conviennent à tous les niveaux – des débutants aux cuisiniers expérimentés à la recherche de nouvelles 
                 idées culinaires et de recettes de pâtisserie.
@@ -608,7 +608,7 @@ export default function EnhancedHomeClient({
       <section className="py-16 bg-gradient-to-r from-[#FF7A7A] to-[#6FCF97]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Commencez votre aventure culinaire dès aujourd'hui
+            Commencez votre aventure culinaire dès aujourd&apos;hui
           </h2>
           <p className="text-xl text-white/90 mb-8">
             Découvrez plus de {totalRecipes} recettes testées pour tous les goûts et toutes les occasions. 

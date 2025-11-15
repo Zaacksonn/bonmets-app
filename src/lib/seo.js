@@ -22,7 +22,7 @@ export function generateMetadata({
 }) {
   const fullTitle = title || SITE_NAME;
   const fullUrl = url ? `${SITE_URL}${url}` : SITE_URL;
-  const imageUrl = image ? `${SITE_URL}${image}` : `${SITE_URL}/bak-stunden.png`;
+  const imageUrl = image ? `${SITE_URL}${image}` : `${SITE_URL}/og-image.png`;
 
   const metadata = {
     title: fullTitle,
@@ -72,15 +72,9 @@ export function generateMetadata({
       canonical: fullUrl,
     },
     metadataBase: new URL(SITE_URL),
-    verification: {
-      google: process.env.GOOGLE_SITE_VERIFICATION,
-      yandex: process.env.YANDEX_VERIFICATION,
-      yahoo: process.env.YAHOO_VERIFICATION,
-    },
     other: {
       'msapplication-TileColor': '#FF7A7A',
       'theme-color': '#FF7A7A',
-      'google-site-verification': process.env.GOOGLE_SITE_VERIFICATION,
     },
     category: type === 'article' ? 'Alimentation & Cuisine' : 'Alimentation & Cuisine',
   };
@@ -120,7 +114,7 @@ export function generateRecipeSchema(recipe) {
       name: SITE_NAME,
       logo: {
         '@type': 'ImageObject',
-        url: `${SITE_URL}/bak-stunden.png`,
+        url: `${SITE_URL}/logo.png`,
       },
     },
     datePublished: recipe.publishedAt,

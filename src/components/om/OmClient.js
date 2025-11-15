@@ -170,7 +170,7 @@ export default function OmClient() {
                   Nous étions fatigués des recettes compliquées avec des ingrédients difficiles à trouver et des instructions imprécises. Nous avons donc décidé de créer quelque chose de mieux.
                 </p>
                 <p>
-                  Aujourd'hui, Bonmets est un endroit où plus de 50 000 passionnés de cuisine trouvent chaque mois de l'inspiration, apprennent de nouvelles techniques et partagent leurs succès culinaires.
+                  Aujourd&apos;hui, Bonmets est un endroit où plus de 50 000 passionnés de cuisine trouvent chaque mois de l&apos;inspiration, apprennent de nouvelles techniques et partagent leurs succès culinaires.
                 </p>
               </div>
             </div>
@@ -237,7 +237,7 @@ export default function OmClient() {
               className="text-4xl md:text-5xl font-bold mb-4"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Rencontrez l'équipe
+              Rencontrez l&apos;équipe
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Des passionnés de cuisine qui travaillent pour vous offrir les meilleures recettes
@@ -297,7 +297,7 @@ export default function OmClient() {
                 href="/"
                 className="inline-block px-8 py-4 bg-white text-[#FF7A7A] font-bold rounded-full hover:shadow-xl transition-all"
               >
-                S'abonner maintenant
+                S&apos;abonner maintenant
               </Link>
             </div>
           </motion.div>
@@ -345,7 +345,7 @@ export default function OmClient() {
               Prêt à commencer à cuisiner ?
             </h2>
             <p className="text-gray-600 text-lg mb-8">
-              Explorez nos centaines de recettes et trouvez votre prochain favori aujourd'hui
+              Explorez nos centaines de recettes et trouvez votre prochain favori aujourd&apos;hui
             </p>
             <Link
               href="/recettes"
