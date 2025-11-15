@@ -66,7 +66,7 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const recipeData = await getContentBySlug('recipes', slug);
 
-  if (!recipeData) return { title: 'Recept hittades inte' };
+  if (!recipeData) return { title: 'Recette introuvable' };
 
   // Extract frontmatter data for metadata generation
   const recipe = {
@@ -107,16 +107,16 @@ export default async function RecipePage({ params }) {
     ? frontmatter.faqs 
     : [
         {
-          question: `Hur lång tid tar det att laga ${frontmatter.title}?`,
-          answer: `Det tar cirka ${frontmatter.totalTimeMinutes} minuter att laga ${frontmatter.title}.${frontmatter.prepTimeMinutes ? ` Förberedelse: ${frontmatter.prepTimeMinutes} minuter.` : ''}${frontmatter.cookTimeMinutes ? ` Tillagning: ${frontmatter.cookTimeMinutes} minuter.` : ''}`
+          question: `Combien de temps faut-il pour préparer ${frontmatter.title} ?`,
+          answer: `Il faut environ ${frontmatter.totalTimeMinutes} minutes pour préparer ${frontmatter.title}.${frontmatter.prepTimeMinutes ? ` Préparation : ${frontmatter.prepTimeMinutes} minutes.` : ''}${frontmatter.cookTimeMinutes ? ` Cuisson : ${frontmatter.cookTimeMinutes} minutes.` : ''}`
         },
         {
-          question: `Hur många portioner ger ${frontmatter.title}?`,
-          answer: `Detta recept ger ${frontmatter.servings} portioner.`
+          question: `Combien de portions donne ${frontmatter.title} ?`,
+          answer: `Cette recette donne ${frontmatter.servings} portions.`
         },
         {
-          question: `Vilken svårighetsgrad har ${frontmatter.title}?`,
-          answer: `Detta recept har svårighetsgrad ${frontmatter.difficulty || 'medel'}.`
+          question: `Quel est le niveau de difficulté de ${frontmatter.title} ?`,
+          answer: `Cette recette est de difficulté ${frontmatter.difficulty || 'moyenne'}.`
         }
       ];
 
@@ -128,27 +128,27 @@ export default async function RecipePage({ params }) {
       }))
     : [
         {
-          title: 'Proffstips',
-          content: `För bästa resultat med ${frontmatter.title}, se till att alla ingredienser är i rumstemperatur.`,
+          title: 'Astuce de chef',
+          content: `Pour de meilleurs résultats avec ${frontmatter.title}, assurez-vous que tous les ingrédients soient à température ambiante.`,
           icon: Lightbulb
         },
         {
-          title: 'Tidssparande',
-          content: 'Förbered alla ingredienser innan du börjar för att spara tid under tillagningen.',
+          title: 'Gain de temps',
+          content: 'Préparez tous les ingrédients à l\'avance pour gagner du temps pendant la cuisson.',
           icon: Clock
         },
         {
-          title: 'Lagring',
-          content: `${frontmatter.title} kan förvaras i kylskåp i upp till 3 dagar eller frysas i 2 månader.`,
+          title: 'Conservation',
+          content: `${frontmatter.title} peut être conservé au réfrigérateur jusqu'à 3 jours ou congelé pendant 2 mois.`,
           icon: Heart
         }
       ];
 
   // Generate breadcrumbs
   const breadcrumbs = [
-    { name: 'Hem', url: '/' },
-    { name: 'Recept', url: '/recept' },
-    { name: frontmatter.category, url: `/kategorier/${frontmatter.category?.toLowerCase()}-recept` },
+    { name: 'Accueil', url: '/' },
+    { name: 'Recettes', url: '/recettes' },
+    { name: frontmatter.category, url: `/categories/${frontmatter.category?.toLowerCase()}-recept` },
     { name: frontmatter.title }
   ];
 
@@ -168,7 +168,7 @@ export default async function RecipePage({ params }) {
         <section className="relative w-full h-[70vh] min-h-[600px] max-h-[800px]">
           <Image
             src={frontmatter.heroImage.src}
-            alt={frontmatter.heroImage.alt || `${frontmatter.title} - Bakstunden recept`}
+            alt={frontmatter.heroImage.alt || `${frontmatter.title} - Recette Bonmets`}
             fill
             className="object-cover"
             priority
@@ -179,7 +179,7 @@ export default async function RecipePage({ params }) {
           {/* Category Badge - moved to bottom right */}
           <div className="absolute bottom-6 right-6 md:bottom-8 md:right-8">
             <Link
-              href={`/recept?category=${encodeURIComponent(frontmatter.category)}`}
+              href={`/recettes?category=${encodeURIComponent(frontmatter.category)}`}
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/95 backdrop-blur-md text-gray-900 rounded-full text-sm font-semibold shadow-xl hover:bg-white hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               <ChefHat className="w-4 h-4" />
@@ -214,8 +214,8 @@ export default async function RecipePage({ params }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs
             items={[
-              { name: 'Recept', url: '/recept' },
-              { name: frontmatter.category, url: `/recept?category=${frontmatter.category}` },
+              { name: 'Recettes', url: '/recettes' },
+              { name: frontmatter.category, url: `/recettes?category=${frontmatter.category}` },
               { name: frontmatter.title },
             ]}
           />
@@ -240,7 +240,7 @@ export default async function RecipePage({ params }) {
                     <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
                       <Image
                         src={frontmatter.heroImage.src}
-                        alt={frontmatter.heroImage.alt || `${frontmatter.title} - Bakstunden recept`}
+                        alt={frontmatter.heroImage.alt || `${frontmatter.title} - Recette Bonmets`}
                         fill
                         className="object-cover"
                         sizes="(max-width: 768px) 100vw, 50vw"

@@ -36,11 +36,11 @@ export default function NotFoundClient() {
               404
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-6">
-              Oops! Sidan hittades inte
+              Oups ! Page introuvable
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-              Den sida du letar efter finns inte längre eller har flyttats. 
-              Men oroa dig inte - vi har massor av goda recept som väntar på dig!
+              La page que vous recherchez n&apos;existe plus ou a été déplacée. 
+              Mais ne vous inquiétez pas - nous avons plein de délicieuses recettes qui vous attendent !
             </p>
           </motion.div>
 
@@ -56,15 +56,15 @@ export default function NotFoundClient() {
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-orange-500 to-pink-500 text-white font-semibold rounded-xl hover:from-orange-600 hover:to-pink-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <Home className="w-5 h-5" />
-              Tillbaka till startsidan
+              Retour à l&apos;accueil
             </Link>
             
             <Link
-              href="/recept"
+              href="/recettes"
               className="inline-flex items-center gap-2 px-8 py-4 bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-xl border-2 border-gray-200 dark:border-gray-600 hover:border-orange-300 dark:hover:border-orange-500 hover:bg-orange-50 dark:hover:bg-orange-900/20 transform hover:scale-105 transition-all duration-300"
             >
               <Search className="w-5 h-5" />
-              Utforska alla recept
+              Explorer toutes les recettes
             </Link>
           </motion.div>
 
@@ -76,14 +76,14 @@ export default function NotFoundClient() {
             className="mt-12"
           >
             <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-6">
-              Populära kategorier
+              Catégories populaires
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {[
-                { name: 'Kyckling', href: '/kategorier/kyckling-recept', emoji: '🐔' },
-                { name: 'Pasta', href: '/kategorier/pasta-recept', emoji: '🍝' },
-                { name: 'Kladdkaka', href: '/kategorier/kladdkaka-recept', emoji: '🍰' },
-                { name: 'Pannkakor', href: '/kategorier/pannkakor-recept', emoji: '🥞' },
+                { name: 'Poulet', href: '/categories/viandes-recept', emoji: '🐔' },
+                { name: 'Pâtes', href: '/categories/pates-recept', emoji: '🍝' },
+                { name: 'Gâteau au chocolat', href: '/categories/desserts-recept', emoji: '🍰' },
+                { name: 'Crêpes', href: '/categories/patisserie-recept', emoji: '🥞' },
               ].map((category, index) => (
                 <Link
                   key={category.name}
@@ -109,14 +109,14 @@ export default function NotFoundClient() {
             className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700"
           >
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              Om du tror att detta är ett fel,{' '}
+              Si vous pensez qu&apos;il s&apos;agit d&apos;une erreur,{' '}
               <Link 
-                href="/om" 
+                href="/a-propos" 
                 className="text-orange-500 hover:text-orange-600 dark:text-orange-400 dark:hover:text-orange-300 underline"
               >
-                kontakta oss
+                contactez-nous
               </Link>
-              {' '}så hjälper vi dig!
+              {' '}et nous vous aiderons !
             </p>
           </motion.div>
         </motion.div>

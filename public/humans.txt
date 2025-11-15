@@ -3,14 +3,14 @@
 
 # TEAM
 
-    Emma Andersson -- Mat-entusiast och receptutvecklare
-    Sara Bergman -- Kokkonsult och matskribent  
-    Erik Lindström -- Matbloggare och grill-expert
+    Équipe Bonmets -- Passionnés de cuisine et développeurs de recettes
+    Équipe Bonmets -- Consultantes culinaires et rédactrices de recettes  
+    Équipe Bonmets -- Experts culinaires et créateurs de contenu
 
 # THANKS
 
-    Alla som bidragit med recept och feedback
-    Open source-communityn
+    Tous ceux qui ont contribué avec des recettes et des retours
+    La communauté open source
 
 # TECHNOLOGY COLOPHON
 
@@ -24,8 +24,8 @@
     
 # SITE
 
-    Last update: 2024-10-12
-    Language: Svenska / Swedish
+    Last update: 2024-12-28
+    Language: Français / French
     Doctype: HTML5
     IDE: VS Code, Cursor
 

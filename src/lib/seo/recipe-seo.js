@@ -39,7 +39,7 @@ export function generateRecipeMetadata(recipe) {
   const canonicalUrl = `${SITE_URL}/recettes/${slug}`;
   
   // Generate image URL
-  const imageUrl = heroImage?.src ? `${SITE_URL}${heroImage.src}` : `${SITE_URL}/bak-stunden.png`;
+  const imageUrl = heroImage?.src ? `${SITE_URL}${heroImage.src}` : `${SITE_URL}/og-image.png`;
 
   return {
     title: seoTitle,
@@ -50,20 +50,20 @@ export function generateRecipeMetadata(recipe) {
       title: seoTitle,
       description: seoDescription,
       url: canonicalUrl,
-      siteName: 'Bakstunden',
+      siteName: 'Bonmets',
       images: [
         {
           url: imageUrl,
           width: 1200,
           height: 630,
-          alt: `${title} - Bakstunden recept`,
+          alt: `${title} - Recette Bonmets`,
         },
       ],
-      locale: 'sv_SE',
+      locale: 'fr_FR',
       type: 'article',
       publishedTime: publishedAt,
       modifiedTime: updatedAt || publishedAt,
-      authors: author ? [author] : ['Bakstunden Team'],
+      authors: author ? [author] : ['Équipe Bonmets'],
       tags: tags,
       section: category,
     },
@@ -72,8 +72,8 @@ export function generateRecipeMetadata(recipe) {
       title: seoTitle,
       description: seoDescription,
       images: [imageUrl],
-      creator: '@bakstunden',
-      site: '@bakstunden',
+      creator: '@bonmets',
+      site: '@bonmets',
     },
     robots: {
       index: true,
@@ -90,7 +90,7 @@ export function generateRecipeMetadata(recipe) {
       canonical: canonicalUrl,
     },
     other: {
-      'article:author': author || 'Bakstunden Team',
+      'article:author': author || 'Équipe Bonmets',
       'article:section': category,
       'article:tag': tags.join(','),
       'article:published_time': publishedAt,
@@ -105,7 +105,7 @@ export function generateRecipeMetadata(recipe) {
  */
 function generateRecipeTitle(title = '', category = '', difficulty = '') {
   // Use the exact title from MDX file with NO additions
-  return title || 'Recept';
+  return title || 'Recette';
 }
 
 /**
@@ -114,7 +114,7 @@ function generateRecipeTitle(title = '', category = '', difficulty = '') {
  */
 function generateRecipeDescription(excerpt = '', category = '', totalTimeMinutes = 0, servings = 0) {
   // Use the exact excerpt from MDX file without any modifications
-  return excerpt || 'Lär dig att laga god mat med vår steg-för-steg guide på Bakstunden.';
+  return excerpt || 'Apprenez à cuisiner de délicieux plats avec notre guide pas à pas sur Bonmets.';
 }
 
 /**
@@ -122,21 +122,21 @@ function generateRecipeDescription(excerpt = '', category = '', totalTimeMinutes
  */
 function generateRecipeKeywords(tags = [], category = '', title = '') {
   const baseKeywords = [
-    'recept',
-    'matlagning',
-    'svenska recept',
-    'bakning',
-    'matlagningsguider',
-    'hemlagad mat',
-    'familjerecept'
+    'recette',
+    'cuisine',
+    'recettes françaises',
+    'pâtisserie',
+    'guides culinaires',
+    'cuisine maison',
+    'recettes familiales'
   ];
   
   const categoryKeywords = {
-    'Dessert': ['dessert', 'efterrätt', 'söta recept', 'bakning', 'kakor', 'tårtor'],
-    'Huvudrätt': ['huvudrätt', 'middag', 'kött', 'fisk', 'kyckling', 'vegetariskt'],
-    'Frukost': ['frukost', 'brunch', 'pannkakor', 'vafflor', 'morgonmat'],
-    'Förrätt': ['förrätt', 'förrätt', 'sallad', 'soppa', 'snacks'],
-    'Bakning': ['bakning', 'bröd', 'kakor', 'tårtor', 'fika', 'söta bakverk']
+    'Dessert': ['dessert', 'pâtisserie', 'recettes sucrées', 'gâteaux', 'tartes', 'douceurs'],
+    'Plat principal': ['plat principal', 'dîner', 'viande', 'poisson', 'poulet', 'végétarien'],
+    'Petit déjeuner': ['petit déjeuner', 'brunch', 'crêpes', 'gaufres', 'repas du matin'],
+    'Entrée': ['entrée', 'hors-d\'œuvre', 'salade', 'soupe', 'amuse-bouches'],
+    'Pâtisserie': ['pâtisserie', 'pain', 'gâteaux', 'tartes', 'pâtisseries françaises', 'viennoiseries']
   };
   
   const titleKeywords = title.toLowerCase().split(' ').filter(word => word.length > 3);
@@ -189,14 +189,14 @@ export function generateEnhancedRecipeSchema(recipe) {
     image: heroImage?.src ? `${SITE_URL}${heroImage.src}` : undefined,
     author: {
       '@type': 'Person',
-      name: author || 'Bakstunden Team',
+      name: author || 'Équipe Bonmets',
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Bakstunden',
+      name: 'Bonmets',
       logo: {
         '@type': 'ImageObject',
-        url: `${SITE_URL}/bak-stunden.png`,
+        url: `${SITE_URL}/logo.png`,
         width: 512,
         height: 512,
       },
@@ -206,14 +206,14 @@ export function generateEnhancedRecipeSchema(recipe) {
     prepTime: prepTimeMinutes ? `PT${prepTimeMinutes}M` : undefined,
     cookTime: cookTimeMinutes ? `PT${cookTimeMinutes}M` : undefined,
     totalTime: totalTimeMinutes ? `PT${totalTimeMinutes}M` : undefined,
-    recipeYield: servings ? `${servings} portioner` : undefined,
+    recipeYield: servings ? `${servings} portions` : undefined,
     recipeCategory: category || 'Dessert',
-    recipeCuisine: cuisine || 'Swedish',
+    recipeCuisine: cuisine || 'French',
     keywords: tags.join(', '),
     recipeInstructions: steps.map((step, index) => ({
       '@type': 'HowToStep',
       position: index + 1,
-      name: step.title || `Steg ${index + 1}`,
+      name: step.title || `Étape ${index + 1}`,
       text: step.description,
       image: step.image ? `${SITE_URL}${step.image}` : undefined,
     })),
@@ -239,7 +239,7 @@ export function generateEnhancedRecipeSchema(recipe) {
   if (nutrition.length > 0 || caloriesPerServing) {
     schema.nutrition = {
       '@type': 'NutritionInformation',
-      calories: caloriesPerServing ? `${caloriesPerServing} kalorier` : undefined,
+      calories: caloriesPerServing ? `${caloriesPerServing} calories` : undefined,
       ...nutrition.reduce((acc, item) => {
         acc[item.name] = `${item.value}${item.unit || ''}`;
         return acc;
@@ -251,8 +251,8 @@ export function generateEnhancedRecipeSchema(recipe) {
   if (recipe.video) {
     schema.video = {
       '@type': 'VideoObject',
-      name: `${title} - Videoguide`,
-      description: `Lär dig att laga ${title} med vår videoguide`,
+      name: `${title} - Guide vidéo`,
+      description: `Apprenez à préparer ${title} avec notre guide vidéo`,
       thumbnailUrl: heroImage?.src ? `${SITE_URL}${heroImage.src}` : undefined,
       contentUrl: recipe.video.url,
       embedUrl: recipe.video.embedUrl,
@@ -269,12 +269,12 @@ export function generateEnhancedRecipeSchema(recipe) {
 function generateDietaryInfo(allergens, tags) {
   const dietaryInfo = [];
   
-  if (tags.includes('Vegetariskt')) dietaryInfo.push('VegetarianDiet');
-  if (tags.includes('Veganskt')) dietaryInfo.push('VeganDiet');
-  if (tags.includes('Glutenfritt')) dietaryInfo.push('GlutenFreeDiet');
-  if (tags.includes('Laktosfritt')) dietaryInfo.push('LowLactoseDiet');
-  if (tags.includes('Lågkolhydrat')) dietaryInfo.push('LowCarbDiet');
-  if (tags.includes('Lågfett')) dietaryInfo.push('LowFatDiet');
+  if (tags.includes('Végétarien') || tags.includes('Vegetarien')) dietaryInfo.push('VegetarianDiet');
+  if (tags.includes('Végan') || tags.includes('Vegan')) dietaryInfo.push('VeganDiet');
+  if (tags.includes('Sans gluten') || tags.includes('Gluten-free')) dietaryInfo.push('GlutenFreeDiet');
+  if (tags.includes('Sans lactose') || tags.includes('Lactose-free')) dietaryInfo.push('LowLactoseDiet');
+  if (tags.includes('Faible en glucides') || tags.includes('Low-carb')) dietaryInfo.push('LowCarbDiet');
+  if (tags.includes('Faible en gras') || tags.includes('Low-fat')) dietaryInfo.push('LowFatDiet');
   
   return dietaryInfo.length > 0 ? dietaryInfo : undefined;
 }
@@ -285,23 +285,23 @@ function generateDietaryInfo(allergens, tags) {
 export function generateRecipeFAQSchema(recipe) {
   const faqs = [
     {
-      question: `Hur lång tid tar det att laga ${recipe.title}?`,
-      answer: `Det tar cirka ${recipe.totalTimeMinutes} minuter att laga ${recipe.title}.${recipe.prepTimeMinutes ? ` Förberedelse: ${recipe.prepTimeMinutes} minuter.` : ''}${recipe.cookTimeMinutes ? ` Tillagning: ${recipe.cookTimeMinutes} minuter.` : ''}`
+      question: `Combien de temps faut-il pour préparer ${recipe.title} ?`,
+      answer: `Il faut environ ${recipe.totalTimeMinutes} minutes pour préparer ${recipe.title}.${recipe.prepTimeMinutes ? ` Préparation : ${recipe.prepTimeMinutes} minutes.` : ''}${recipe.cookTimeMinutes ? ` Cuisson : ${recipe.cookTimeMinutes} minutes.` : ''}`
     },
     {
-      question: `Hur många portioner ger ${recipe.title}?`,
-      answer: `Detta recept ger ${recipe.servings} portioner.`
+      question: `Combien de portions donne ${recipe.title} ?`,
+      answer: `Cette recette donne ${recipe.servings} portions.`
     },
     {
-      question: `Vilken svårighetsgrad har ${recipe.title}?`,
-      answer: `Detta recept har svårighetsgrad ${recipe.difficulty || 'medel'}. ${getDifficultyDescription(recipe.difficulty)}`
+      question: `Quel est le niveau de difficulté de ${recipe.title} ?`,
+      answer: `Cette recette est de difficulté ${recipe.difficulty || 'moyenne'}. ${getDifficultyDescription(recipe.difficulty)}`
     }
   ];
 
   if (recipe.allergens && recipe.allergens.length > 0) {
     faqs.push({
-      question: `Innehåller ${recipe.title} allergener?`,
-      answer: `Ja, detta recept innehåller: ${recipe.allergens.join(', ')}.`
+      question: `${recipe.title} contient-il des allergènes ?`,
+      answer: `Oui, cette recette contient : ${recipe.allergens.join(', ')}.`
     });
   }
 
@@ -324,11 +324,11 @@ export function generateRecipeFAQSchema(recipe) {
  */
 function getDifficultyDescription(difficulty) {
   const descriptions = {
-    'Lätt': 'Perfekt för nybörjare med enkla tekniker och få ingredienser.',
-    'Medel': 'Kräver lite erfarenhet och några grundläggande matlagningsfärdigheter.',
-    'Svår': 'Avancerat recept som kräver erfarenhet och precision.'
+    'Facile': 'Parfait pour les débutants avec des techniques simples et peu d\'ingrédients.',
+    'Moyen': 'Nécessite un peu d\'expérience et quelques compétences culinaires de base.',
+    'Difficile': 'Recette avancée qui nécessite de l\'expérience et de la précision.'
   };
-  return descriptions[difficulty] || descriptions['Medel'];
+  return descriptions[difficulty] || descriptions['Moyen'];
 }
 
 /**
@@ -338,15 +338,15 @@ export function generateRelatedContentSchema(relatedRecipes, category) {
   return {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: `Relaterade ${category} recept`,
-    description: `Fler ${category.toLowerCase()} recept du kanske gillar`,
+    name: `Recettes ${category} similaires`,
+    description: `Plus de recettes ${category.toLowerCase()} que vous pourriez aimer`,
     itemListElement: relatedRecipes.map((recipe, index) => ({
       '@type': 'ListItem',
       position: index + 1,
       item: {
         '@type': 'Recipe',
         name: recipe.title,
-        url: `${SITE_URL}/recept/${recipe.slug}`,
+        url: `${SITE_URL}/recettes/${recipe.slug}`,
         image: recipe.heroImage?.src ? `${SITE_URL}${recipe.heroImage.src}` : undefined,
         description: recipe.excerpt,
       },

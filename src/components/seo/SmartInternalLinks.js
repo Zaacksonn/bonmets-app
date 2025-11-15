@@ -14,7 +14,7 @@ export default function SmartInternalLinks({ links, currentRecipe }) {
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
           <ArrowRight className="w-6 h-6 mr-3 text-[#FF7A7A]" />
-          Du kanske också gillar
+          Vous pourriez aussi aimer
         </h2>
         
         <div className="space-y-8">
@@ -29,7 +29,7 @@ export default function SmartInternalLinks({ links, currentRecipe }) {
                 {linkGroup.links.map((recipe) => (
                   <Link
                     key={recipe.slug}
-                    href={`/recept/${recipe.slug}`}
+                    href={`/recettes/${recipe.slug}`}
                     className="group bg-gray-50 dark:bg-gray-700 rounded-lg p-4 hover:bg-[#FF7A7A]/10 dark:hover:bg-[#6FCF97]/20 transition-all duration-300 hover:scale-105"
                   >
                     <div className="flex items-start space-x-3">
@@ -104,14 +104,14 @@ function getRelevanceReason(recipe, type) {
     case 'related':
       return (
         <div className="mt-2 text-xs text-gray-500 dark:text-gray-400">
-          Liknande kategori och taggar
+          Catégorie et tags similaires
         </div>
       );
     case 'ingredients':
       return (
         <div className="mt-2 text-xs text-gray-500 dark:text-gray-400">
           {recipe.commonIngredients?.length > 0 && (
-            <span>Delar ingredienser: {recipe.commonIngredients.slice(0, 2).join(', ')}</span>
+            <span>Ingrédients partagés : {recipe.commonIngredients.slice(0, 2).join(', ')}</span>
           )}
         </div>
       );
@@ -119,7 +119,7 @@ function getRelevanceReason(recipe, type) {
       return (
         <div className="mt-2 text-xs text-gray-500 dark:text-gray-400">
           {recipe.commonTechniques?.length > 0 && (
-            <span>Samma teknik: {recipe.commonTechniques.slice(0, 2).join(', ')}</span>
+            <span>Même technique : {recipe.commonTechniques.slice(0, 2).join(', ')}</span>
           )}
         </div>
       );
@@ -127,7 +127,7 @@ function getRelevanceReason(recipe, type) {
       return (
         <div className="mt-2 text-xs text-gray-500 dark:text-gray-400">
           {recipe.commonSeasonal?.length > 0 && (
-            <span>Säsong: {recipe.commonSeasonal.join(', ')}</span>
+            <span>Saison : {recipe.commonSeasonal.join(', ')}</span>
           )}
         </div>
       );
@@ -144,13 +144,13 @@ export function CategoryNavigation({ categories, currentCategory }) {
     <section className="bg-white dark:bg-gray-800 rounded-2xl p-8 mb-12 border border-gray-200 dark:border-gray-700">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-          Utforska fler kategorier
+          Explorer plus de catégories
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {categories.map((category) => (
             <Link
               key={category.slug}
-              href={`/kategorier/${category.slug}`}
+              href={`/categories/${category.slug}`}
               className={`p-4 rounded-lg text-center transition-all duration-300 ${
                 currentCategory === category.slug
                   ? 'bg-[#FF7A7A]/10 dark:bg-[#6FCF97]/20 text-[#FF7A7A] dark:text-[#6FCF97]'
@@ -170,7 +170,7 @@ export function CategoryNavigation({ categories, currentCategory }) {
 /**
  * Trending Recipes Component
  */
-export function TrendingRecipes({ recipes, title = "Populära recept just nu" }) {
+export function TrendingRecipes({ recipes, title = "Recettes populaires en ce moment" }) {
   if (!recipes || recipes.length === 0) return null;
 
   return (
@@ -185,7 +185,7 @@ export function TrendingRecipes({ recipes, title = "Populära recept just nu" })
           {recipes.slice(0, 6).map((recipe) => (
             <Link
               key={recipe.slug}
-              href={`/recept/${recipe.slug}`}
+              href={`/recettes/${recipe.slug}`}
               className="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105 border border-gray-100 dark:border-gray-700"
             >
               {recipe.heroImage?.src && (
@@ -198,7 +198,7 @@ export function TrendingRecipes({ recipes, title = "Populära recept just nu" })
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   <div className="absolute top-3 right-3 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                    Trendande
+                    Tendance
                   </div>
                 </div>
               )}

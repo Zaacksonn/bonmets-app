@@ -64,26 +64,26 @@ export default function EnhancedKategorierClient({
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6 font-playfair">
-              Alla Receptkategorier
+              Toutes les catégories de recettes
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
-              Upptäck över {totalRecipes} recept i {allCategories.length} kategorier. 
-              Från klassiska svenska rätter till internationella favoriter.
+              Découvrez plus de {totalRecipes} recettes dans {allCategories.length} catégories. 
+              Des plats français classiques aux favoris internationaux.
             </p>
             
             {/* Quick Stats */}
             <div className="flex flex-wrap justify-center gap-6 md:gap-8 mb-8">
               <div className="flex items-center gap-2">
                 <BookOpen className="w-6 h-6" />
-                <span className="text-lg font-semibold">{totalRecipes}+ recept</span>
+                <span className="text-lg font-semibold">{totalRecipes}+ recettes</span>
               </div>
               <div className="flex items-center gap-2">
                 <ChefHat className="w-6 h-6" />
-                <span className="text-lg font-semibold">{allCategories.length} kategorier</span>
+                <span className="text-lg font-semibold">{allCategories.length} catégories</span>
               </div>
               <div className="flex items-center gap-2">
                 <Star className="w-6 h-6 fill-yellow-400 text-yellow-400" />
-                <span className="text-lg font-semibold">4.8/5 betyg</span>
+                <span className="text-lg font-semibold">4.8/5 note</span>
               </div>
             </div>
           </motion.div>
@@ -99,7 +99,7 @@ export default function EnhancedKategorierClient({
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
-                placeholder="Sök kategorier..."
+                placeholder="Rechercher des catégories..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#FF7A7A] focus:border-transparent dark:bg-gray-700 dark:text-white"
@@ -113,9 +113,9 @@ export default function EnhancedKategorierClient({
                 onChange={(e) => setSortBy(e.target.value)}
                 className="px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#FF7A7A] dark:bg-gray-700 dark:text-white"
               >
-                <option value="popular">Mest populära</option>
-                <option value="alphabetical">Alfabetisk</option>
-                <option value="newest">Nyaste</option>
+                <option value="popular">Les plus populaires</option>
+                <option value="alphabetical">Alphabétique</option>
+                <option value="newest">Plus récentes</option>
               </select>
 
               <div className="flex border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden">
@@ -149,11 +149,11 @@ export default function EnhancedKategorierClient({
             <div className="flex items-center justify-center gap-2 mb-4">
               <TrendingUp className="w-8 h-8 text-[#FF7A7A]" />
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
-                Populära Kategorier
+                Catégories populaires
               </h2>
             </div>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Våra mest älskade kategorier med flest recept och högsta betyg
+              Nos catégories les plus appréciées avec le plus de recettes et les meilleures notes
             </p>
           </motion.div>
 
@@ -167,7 +167,7 @@ export default function EnhancedKategorierClient({
                 transition={{ delay: index * 0.1 }}
               >
                 <Link
-                  href={`/kategorier/${category.slug}`}
+                  href={`/categories/${category.slug}`}
                   className="block group"
                 >
                   <div className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-200 dark:border-gray-700">
@@ -197,7 +197,7 @@ export default function EnhancedKategorierClient({
                       </p>
                       <div className="flex items-center justify-between mt-4">
                         <span className="text-[#FF7A7A] dark:text-[#6FCF97] font-semibold text-sm">
-                          Utforska recept
+                          Explorer les recettes
                         </span>
                         <ArrowRight className="w-4 h-4 text-[#FF7A7A] dark:text-[#6FCF97] group-hover:translate-x-1 transition-transform" />
                       </div>
@@ -220,10 +220,10 @@ export default function EnhancedKategorierClient({
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Alla Kategorier
+              Toutes les catégories
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400">
-              Utforska alla våra {allCategories.length} receptkategorier
+              Explorer toutes nos {allCategories.length} catégories de recettes
             </p>
           </motion.div>
 
@@ -238,7 +238,7 @@ export default function EnhancedKategorierClient({
                   transition={{ delay: index * 0.05 }}
                 >
                   <Link
-                    href={`/kategorier/${category.slug}`}
+                    href={`/categories/${category.slug}`}
                     className="block group"
                   >
                     <div className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 border border-gray-200 dark:border-gray-700">
@@ -283,7 +283,7 @@ export default function EnhancedKategorierClient({
                   transition={{ delay: index * 0.05 }}
                 >
                   <Link
-                    href={`/kategorier/${category.slug}`}
+                    href={`/categories/${category.slug}`}
                     className="block group"
                   >
                     <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700">
@@ -332,34 +332,34 @@ export default function EnhancedKategorierClient({
           >
             <Sparkles className="w-12 h-12 mx-auto mb-4 text-[#FF7A7A]" />
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              Vanliga Frågor om Kategorier
+              Questions fréquentes sur les catégories
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400">
-              Svar på de vanligaste frågorna om våra receptkategorier
+              Réponses aux questions les plus courantes sur nos catégories de recettes
             </p>
           </motion.div>
 
           <div className="space-y-4">
             {[
               {
-                question: 'Hur många receptkategorier finns det?',
-                answer: `Vi har ${allCategories.length} olika receptkategorier med över ${totalRecipes} recept totalt. Kategorierna inkluderar allt från kyckling och pasta till vegetariska rätter och klassiska svenska desserter.`
+                question: 'Combien de catégories de recettes y a-t-il ?',
+                answer: `Nous avons ${allCategories.length} catégories de recettes différentes avec plus de ${totalRecipes} recettes au total. Les catégories incluent tout, du poulet et des pâtes aux plats végétariens et aux desserts français classiques.`
               },
               {
-                question: 'Vilka är de populäraste receptkategorierna?',
-                answer: `Våra mest populära kategorier är ${popularCategories.slice(0, 3).map(cat => cat.name).join(', ')} och ${popularCategories[3].name}. Dessa kategorier innehåller de flesta recepten och är favoriter bland våra användare.`
+                question: 'Quelles sont les catégories de recettes les plus populaires ?',
+                answer: `Nos catégories les plus populaires sont ${popularCategories.slice(0, 3).map(cat => cat.name).join(', ')} et ${popularCategories[3].name}. Ces catégories contiennent le plus de recettes et sont favorites parmi nos utilisateurs.`
               },
               {
-                question: 'Finns det vegetariska receptkategorier?',
-                answer: 'Ja, vi har en dedikerad vegetariska kategorier med många recept. Dessutom hittar du vegetariska alternativ i andra kategorier som pasta, sallader och tillbehör.'
+                question: 'Y a-t-il des catégories de recettes végétariennes ?',
+                answer: 'Oui, nous avons une catégorie végétarienne dédiée avec de nombreuses recettes. De plus, vous trouverez des options végétariennes dans d\'autres catégories comme les pâtes, les salades et les accompagnements.'
               },
               {
-                question: 'Kan jag filtrera recept efter svårighetsgrad?',
-                answer: 'Ja, alla våra recept är märkta med svårighetsgrad (Lätt, Medel, Svår) så du enkelt kan hitta recept som passar din erfarenhetsnivå. Perfekt för både nybörjare och erfarna kockar!'
+                question: 'Puis-je filtrer les recettes par niveau de difficulté ?',
+                answer: 'Oui, toutes nos recettes sont étiquetées avec un niveau de difficulté (Facile, Moyen, Difficile) pour que vous puissiez facilement trouver des recettes adaptées à votre niveau d\'expérience. Parfait pour les débutants et les cuisiniers expérimentés !'
               },
               {
-                question: 'Uppdateras kategorierna regelbundet?',
-                answer: 'Ja, vi lägger till nya recept och kategorier kontinuerligt. Följ oss för att få de senaste uppdateringarna och nya receptinspirationer direkt i din feed.'
+                question: 'Les catégories sont-elles mises à jour régulièrement ?',
+                answer: 'Oui, nous ajoutons continuellement de nouvelles recettes et catégories. Suivez-nous pour recevoir les dernières mises à jour et de nouvelles inspirations culinaires directement dans votre flux.'
               }
             ].map((faq, index) => (
               <motion.div
@@ -392,17 +392,17 @@ export default function EnhancedKategorierClient({
           >
             <Heart className="w-16 h-16 mx-auto mb-6" />
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Redo att Börja Matlaga?
+              Prêt à commencer à cuisiner ?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Utforska våra {totalRecipes}+ recept och hitta din nästa favoriträtt!
+              Explorez nos {totalRecipes}+ recettes et trouvez votre prochain plat favori !
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/recept"
+                href="/recettes"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#FF7A7A] font-semibold rounded-lg hover:shadow-lg hover:text-[#6FCF97] transform hover:scale-105 transition-all duration-300"
               >
-                Utforska Alla Recept
+                Explorer toutes les recettes
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link

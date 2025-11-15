@@ -14,7 +14,7 @@ import {
 
 export default function EnhancedRecipeFilter({ filters, onFilterChange, categories, tags }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState('kategorier');
+  const [activeTab, setActiveTab] = useState('categories');
 
   const allCategories = getAllCategories();
   const allMealTypes = getAllMealTypes();
@@ -31,7 +31,7 @@ export default function EnhancedRecipeFilter({ filters, onFilterChange, categori
         filterType === 'mealType' || filterType === 'cookingMethod' || 
         filterType === 'difficulty' || filterType === 'timeCategory') {
           
-      newFilters[filterType] = value === 'alla' ? null : value;
+      newFilters[filterType] = value === 'toutes' ? null : value;
     } else if (filterType === 'dietaryTags' || filterType === 'lifestyleTags') {
       const currentTags = newFilters[filterType] || [];
       const newTags = currentTags.includes(value)
@@ -51,7 +51,7 @@ export default function EnhancedRecipeFilter({ filters, onFilterChange, categori
   const getActiveFiltersCount = () => {
     let count = 0;
     Object.values(filters).forEach(value => {
-      if (value && value !== 'alla') {
+      if (value && value !== 'toutes') {
         if (Array.isArray(value)) {
           count += value.length;
         } else {
@@ -65,7 +65,7 @@ export default function EnhancedRecipeFilter({ filters, onFilterChange, categori
   const activeFiltersCount = getActiveFiltersCount();
 
   const tabs = [
-    { id: 'kategorier', label: 'Catégories', icon: Utensils },
+    { id: 'categories', label: 'Catégories', icon: Utensils },
     { id: 'tid', label: 'Temps & Difficulté', icon: Clock },
     { id: 'kost', label: 'Régime & Style de vie', icon: Heart },
     { id: 'metod', label: 'Méthode de cuisson', icon: Search }
@@ -131,8 +131,8 @@ export default function EnhancedRecipeFilter({ filters, onFilterChange, categori
 
           {/* Filter Content */}
           <div className="space-y-6">
-            {/* Kategorier Tab */}
-            {activeTab === 'kategorier' && (
+            {/* Categories Tab */}
+            {activeTab === 'categories' && (
               <div className="space-y-4">
                 <div>
                   <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-3">

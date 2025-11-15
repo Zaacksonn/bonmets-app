@@ -74,7 +74,7 @@ export default function EnhancedCategoryClient({
             <div className="flex items-center justify-center gap-6 text-sm md:text-base">
               <div className="flex items-center gap-2">
                 <BookOpen className="w-5 h-5" />
-                <span>{recipes.length} recept</span>
+                <span>{recipes.length} recettes</span>
               </div>
               {categoryStats.avgTime && (
                 <div className="flex items-center gap-2">
@@ -108,7 +108,7 @@ export default function EnhancedCategoryClient({
                 {recipes.length}
               </div>
               <div className="text-sm md:text-base text-gray-600 dark:text-gray-400">
-                Totalt recept
+                Total de recettes
               </div>
             </motion.div>
 
@@ -123,7 +123,7 @@ export default function EnhancedCategoryClient({
                 {categoryStats.easyRecipes || 0}
               </div>
               <div className="text-sm md:text-base text-gray-600 dark:text-gray-400">
-                Enkla recept
+                Recettes faciles
               </div>
             </motion.div>
 
@@ -153,7 +153,7 @@ export default function EnhancedCategoryClient({
                 {categoryStats.popularRecipes || 0}
               </div>
               <div className="text-sm md:text-base text-gray-600 dark:text-gray-400">
-                Populära
+                Populaires
               </div>
             </motion.div>
           </div>
@@ -171,10 +171,10 @@ export default function EnhancedCategoryClient({
               className="text-center mb-8"
             >
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                Utforska {category.name}
+                Explorer {category.name}
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-400">
-                Välj din favorit underkategori
+                Choisissez votre sous-catégorie préférée
               </p>
             </motion.div>
 
@@ -204,12 +204,12 @@ export default function EnhancedCategoryClient({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              Alla {category.name} Recept
+              Toutes les recettes {category.name}
             </h2>
             
             {/* Difficulty Filter */}
             <div className="flex flex-wrap justify-center gap-2 md:gap-4 mt-6">
-              {['alla', 'lätt', 'medel', 'svår'].map((filter) => (
+              {['toutes', 'facile', 'moyen', 'difficile'].map((filter) => (
                 <button
                   key={filter}
                   onClick={() => setActiveFilter(filter)}
@@ -315,10 +315,10 @@ export default function EnhancedCategoryClient({
             className="text-center mb-12"
           >
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              Utforska Fler Kategorier
+              Explorer plus de catégories
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400">
-              Upptäck andra spännande recept
+              Découvrez d&apos;autres recettes passionnantes
             </p>
           </motion.div>
 
@@ -332,7 +332,7 @@ export default function EnhancedCategoryClient({
                 transition={{ delay: index * 0.1 }}
               >
                 <Link
-                  href={`/kategorier/${cat.slug}`}
+                  href={`/categories/${cat.slug}`}
                   className="block group relative aspect-square overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 >
                   <Image
@@ -395,16 +395,16 @@ export default function EnhancedCategoryClient({
           >
             <Heart className="w-16 h-16 mx-auto mb-6" />
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Älskar du {category.name}?
+              Vous aimez {category.name} ?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Få inspiration direkt till din inkorg med våra bästa recept varje vecka!
+              Recevez de l&apos;inspiration directement dans votre boîte de réception avec nos meilleures recettes chaque semaine !
             </p>
             <Link
-              href="/recept"
+              href="/recettes"
               className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#FF7A7A] font-semibold rounded-lg hover:shadow-lg hover:text-[#6FCF97] transform hover:scale-105 transition-all duration-300"
             >
-              Utforska Alla Recept
+              Explorer toutes les recettes
               <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
