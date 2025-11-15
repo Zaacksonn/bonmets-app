@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useSearchParams } from 'next/navigation';
 import RecipeCard from '@/components/recipe/RecipeCard';
 import EnhancedRecipeFilter from '@/components/recipe/EnhancedRecipeFilter';
@@ -14,7 +14,9 @@ import { searchContent, filterRecipes, sortRecipes, getUniqueFilterValues } from
 
 export default function RecipeListingClient({ initialRecipes, categoryName = null, showHero = false }) {
   const searchParams = useSearchParams();
+  
   // De-duplicate any incoming recipes by slug to prevent React key collisions
+  // This state is initialized once and never changes during component lifecycle
   const [recipes] = useState(() => {
     const seen = new Set();
     return (initialRecipes || []).filter(r => {
@@ -24,12 +26,19 @@ export default function RecipeListingClient({ initialRecipes, categoryName = nul
       return true;
     });
   });
+
   const [filteredRecipes, setFilteredRecipes] = useState(initialRecipes);
   const [filters, setFilters] = useState({});
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('newest');
   const [currentPage, setCurrentPage] = useState(1);
   const recipesPerPage = 12;
+
+  // Memoize setSearchQuery to prevent unnecessary re-renders of EnhancedSearchBar
+  // This is critical to avoid infinite loops
+  const handleSearch = useCallback((query) => {
+    setSearchQuery(query || '');
+  }, []);
 
   // Category descriptions
   const categoryDescriptions = {
@@ -83,8 +92,9 @@ export default function RecipeListingClient({ initialRecipes, categoryName = nul
     setCurrentPage(1);
   }, [recipes, filters, searchQuery, sortBy]);
 
-  const categories = getUniqueFilterValues(recipes, 'category');
-  const tags = getUniqueFilterValues(recipes, 'tags');
+  // Memoize categories and tags to prevent unnecessary recalculations
+  const categories = useMemo(() => getUniqueFilterValues(recipes, 'category'), [recipes]);
+  const tags = useMemo(() => getUniqueFilterValues(recipes, 'tags'), [recipes]);
 
   // Pagination
   const totalPages = Math.ceil(filteredRecipes.length / recipesPerPage);
@@ -95,8 +105,8 @@ export default function RecipeListingClient({ initialRecipes, categoryName = nul
   const currentCategory = categoryName || filters.category || searchParams.get('tag') || searchParams.get('category');
   const categoryDescription = currentCategory ? categoryDescriptions[currentCategory] : null;
 
-  // Get popular tags for suggestions
-  const allTags = getUniqueFilterValues(recipes, 'tags').slice(0, 8);
+  // Get popular tags for suggestions (memoized)
+  const allTags = useMemo(() => getUniqueFilterValues(recipes, 'tags').slice(0, 8), [recipes]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#FFF8F3] to-white dark:from-gray-900 dark:to-gray-800">
@@ -131,9 +141,10 @@ export default function RecipeListingClient({ initialRecipes, categoryName = nul
           <div className="flex flex-col md:flex-row gap-4 mb-6">
             <div className="flex-1">
             <EnhancedSearchBar
-  onSearch={setSearchQuery}
-  placeholder="Rechercher des recettes, ingrédients ou tags..."
-/>
+              onSearch={handleSearch}
+              recipes={recipes}
+              placeholder="Rechercher des recettes, ingrédients ou tags..."
+            />
             </div>
         <EnhancedRecipeFilter
           filters={filters}
