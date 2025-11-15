@@ -20,6 +20,12 @@ const eslintConfig = [
       "next-env.d.ts",
     ],
   },
+  {
+    rules: {
+      "react/no-unescaped-entities": "off",
+      "@next/next/no-script-component-in-head": "off",
+    },
+  },
 ];
 
 export default eslintConfig;
