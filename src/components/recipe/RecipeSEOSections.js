@@ -32,17 +32,17 @@ export function RecipeTipsSection({ recipe, tips = [] }) {
   const displayTips = tips.length > 0 ? tips : defaultTips;
 
   return (
-    <section className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-2xl p-8 mb-12">
+    <section className="bg-gradient-to-r from-[#FF7A7A]/10 to-[#FFA07A]/10 dark:from-[#FF7A7A]/20 dark:to-[#6FCF97]/20 rounded-2xl p-8 mb-12">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
-          <Lightbulb className="w-6 h-6 mr-3 text-purple-600" />
+          <Lightbulb className="w-6 h-6 mr-3 text-[#FF7A7A]" />
           Tips & Tricks för {recipe.title}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {displayTips.map((tip, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700">
               <div className="flex items-center mb-4">
-                <tip.icon className="w-5 h-5 text-purple-600 mr-3" />
+                <tip.icon className="w-5 h-5 text-[#FF7A7A] mr-3" />
                 <h3 className="font-semibold text-gray-900 dark:text-white">{tip.title}</h3>
               </div>
               <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
@@ -85,7 +85,7 @@ export function RecipeFAQSection({ recipe, faqs = [] }) {
     <section className="bg-white dark:bg-gray-800 rounded-2xl p-8 mb-12 border border-gray-200 dark:border-gray-700">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
-          <BookOpen className="w-6 h-6 mr-3 text-purple-600" />
+          <BookOpen className="w-6 h-6 mr-3 text-[#FF7A7A]" />
           Vanliga frågor om {recipe.title}
         </h2>
         <div className="space-y-4">
@@ -93,7 +93,7 @@ export function RecipeFAQSection({ recipe, faqs = [] }) {
             <details key={index} className="group">
               <summary className="flex items-center justify-between w-full p-4 bg-gray-50 dark:bg-gray-700 rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">
                 <span className="font-medium text-gray-900 dark:text-white">{faq.question}</span>
-                <span className="text-purple-600 group-open:rotate-180 transition-transform">▼</span>
+                <span className="text-[#FF7A7A] group-open:rotate-180 transition-transform">▼</span>
               </summary>
               <div className="p-4 bg-white dark:bg-gray-800 rounded-b-lg">
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{faq.answer}</p>
@@ -116,7 +116,7 @@ export function RelatedRecipesSection({ relatedRecipes, category, currentRecipe 
     <section className="bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 rounded-2xl p-4 sm:p-6 lg:p-8 mb-12">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6 flex items-center">
-          <ChefHat className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-purple-600" />
+          <ChefHat className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-[#FF7A7A]" />
           Fler {category} recept du kanske gillar
         </h2>
         
@@ -140,7 +140,7 @@ export function RelatedRecipesSection({ relatedRecipes, category, currentRecipe 
                 </div>
               )}
               <div className="p-2 sm:p-3">
-                <h3 className="font-medium text-sm sm:text-base text-gray-900 dark:text-white mb-1 sm:mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors line-clamp-2 leading-tight">
+                <h3 className="font-medium text-sm sm:text-base text-gray-900 dark:text-white mb-1 sm:mb-2 group-hover:text-[#FF7A7A] dark:group-hover:text-[#6FCF97] transition-colors line-clamp-2 leading-tight">
                   {recipe.title}
                 </h3>
                 
@@ -176,7 +176,7 @@ export function RelatedRecipesSection({ relatedRecipes, category, currentRecipe 
           <div className="mt-4 sm:mt-6 text-center">
             <Link
               href={`/kategorier/${category?.toLowerCase()}-recept`}
-              className="inline-flex items-center px-4 py-2 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-lg hover:bg-purple-200 dark:hover:bg-purple-900/50 transition-colors text-sm font-medium"
+              className="inline-flex items-center px-4 py-2 bg-[#FF7A7A]/10 dark:bg-[#6FCF97]/20 text-[#FF7A7A] dark:text-[#6FCF97] rounded-lg hover:bg-[#FF7A7A]/20 dark:hover:bg-[#6FCF97]/30 transition-colors text-sm font-medium"
             >
               Se alla {category} recept
               <ArrowRight className="w-4 h-4 ml-2" />
@@ -205,8 +205,8 @@ export function RecipeCategoriesSection({ categories, currentCategory }) {
               href={`/kategorier/${category.slug}`}
               className={`p-4 rounded-lg text-center transition-all duration-300 ${
                 currentCategory === category.slug
-                  ? 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300'
-                  : 'bg-gray-50 dark:bg-gray-700 hover:bg-purple-50 dark:hover:bg-purple-900/20 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400'
+                  ? 'bg-[#FF7A7A]/10 dark:bg-[#6FCF97]/20 text-[#FF7A7A] dark:text-[#6FCF97]'
+                  : 'bg-gray-50 dark:bg-gray-700 hover:bg-[#FF7A7A]/10 dark:hover:bg-[#6FCF97]/20 text-gray-700 dark:text-gray-300 hover:text-[#FF7A7A] dark:hover:text-[#6FCF97]'
               }`}
             >
               <div className="text-2xl mb-2">{category.icon}</div>
@@ -254,10 +254,10 @@ export function RecipeSocialSection({ recipe }) {
   ];
 
   return (
-    <section className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-2xl p-8 mb-12">
+    <section className="bg-gradient-to-r from-[#FF7A7A]/10 to-[#FFA07A]/10 dark:from-[#FF7A7A]/20 dark:to-[#6FCF97]/20 rounded-2xl p-8 mb-12">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center justify-center">
-          <Share2 className="w-6 h-6 mr-3 text-purple-600" />
+          <Share2 className="w-6 h-6 mr-3 text-[#FF7A7A]" />
           Dela detta recept
         </h2>
         <p className="text-gray-600 dark:text-gray-400 mb-6">

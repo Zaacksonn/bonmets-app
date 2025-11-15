@@ -44,7 +44,7 @@ export default function RecipeActions({ title }) {
     <div className="flex flex-wrap gap-3">
       <button
         onClick={handlePrint}
-        className="flex items-center gap-2 px-5 py-2.5 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-purple-300 dark:hover:border-purple-600 transition-all font-medium"
+        className="flex items-center gap-2 px-5 py-2.5 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-[#FF7A7A] dark:hover:border-[#6FCF97] transition-all font-medium"
         aria-label="Imprimer la recette"
       >
         <Printer className="w-5 h-5" />
@@ -53,7 +53,7 @@ export default function RecipeActions({ title }) {
       
       <button
         onClick={handleShare}
-        className="flex items-center gap-2 px-5 py-2.5 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-purple-300 dark:hover:border-purple-600 transition-all font-medium"
+        className="flex items-center gap-2 px-5 py-2.5 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-[#FF7A7A] dark:hover:border-[#6FCF97] transition-all font-medium"
         aria-label="Partager la recette"
       >
         <Share2 className="w-5 h-5" />
@@ -64,8 +64,8 @@ export default function RecipeActions({ title }) {
         onClick={handleSave}
         className={`flex items-center gap-2 px-5 py-2.5 border-2 rounded-xl transition-all font-medium ${
           isSaved
-            ? 'bg-purple-50 dark:bg-purple-900/20 border-purple-600 text-purple-600'
-            : 'bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-purple-300'
+            ? 'bg-[#FF7A7A]/10 dark:bg-[#6FCF97]/20 border-[#FF7A7A] text-[#FF7A7A] dark:border-[#6FCF97] dark:text-[#6FCF97]'
+            : 'bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-[#FF7A7A] dark:hover:border-[#6FCF97]'
         }`}
         aria-label={isSaved ? 'Enregistrée' : 'Enregistrer la recette'}
       >

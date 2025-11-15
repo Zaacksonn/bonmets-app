@@ -38,27 +38,29 @@ export default async function Home() {
     }
   });
 
-  // Get all categories and select the 12 most relevant ones for homepage
+  // Get all categories and select the most relevant ones for homepage
   const { getAllCategories } = await import('@/lib/categories');
   const allCategories = getAllCategories();
   
-  // Select the 12 most relevant categories for homepage display
+  // Select the most relevant categories for homepage display (all 7 categories)
   const selectedCategoryKeys = [
-    'pannkakor', 'kladdkaka', 'pasta', 'kyckling', 'vegetariska', 'vafflor',
-    'appelpaj', 'chokladbollar', 'kycklingfars', 'lax', 'scones', 'lasagne'
+    'viandes', 'poissons', 'legumes', 'pates', 'desserts', 'sauce', 'patisserie'
   ];
   
-  const popularCategories = selectedCategoryKeys.map(key => {
-    const category = allCategories.find(cat => cat.slug === `${key}-recept`);
-    return {
-      name: category.name,
-      slug: category.slug,
-      image: category.image,
-      icon: category.icon,
-      description: category.description,
-      count: `${tagCounts[category.name] || 0}+ recept`
-    };
-  });
+  const popularCategories = selectedCategoryKeys
+    .map(key => {
+      const category = allCategories.find(cat => cat.slug === `${key}-recept`);
+      if (!category) return null; // Skip if category not found
+      return {
+        name: category.name,
+        slug: category.slug,
+        image: category.image,
+        icon: category.icon,
+        description: category.description,
+        count: `${tagCounts[category.name] || 0}+ recettes`
+      };
+    })
+    .filter(Boolean); // Remove null values
 
   // Generate structured data
   const websiteSchema = generateWebsiteSchema();
@@ -72,42 +74,42 @@ export default async function Home() {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'Vilka typer av recept finns på Bakstunden?',
+        name: 'Quels types de recettes trouve-t-on sur Bonmets ?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: `På Bakstunden hittar du över ${allRecipes.length} matrecept inom kategorier som frukost, lunch, middag, snabbmat, bakning och dessert. Vi har allt från pannkakor och våfflor till kycklingrecept, pasta, vegetariska rätter och klassisk svensk bakning som kladdkaka och chokladbollar.`
+          text: `Sur Bonmets, vous trouverez plus de ${allRecipes.length} recettes dans des catégories comme petit déjeuner, déjeuner, dîner, plats rapides, pâtisserie et dessert. Nous avons tout, des crêpes et gaufres aux recettes de poulet, pâtes, plats végétariens et classiques de la pâtisserie française comme le gâteau au chocolat et les boules de chocolat.`
         }
       },
       {
         '@type': 'Question',
-        name: 'Hur hittar jag enkla recept för vardagen?',
+        name: 'Comment trouver des recettes simples pour le quotidien ?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Använd vår snabbmat-sektion för att hitta snabba middagar under 30 minuter. Du kan också filtrera recept på svårighetsgrad "Lätt" för att hitta enkla recept som passar nybörjare. Alla våra vardagsrecept är enkla att följa med tydliga instruktioner och tillgängliga ingredienser.'
+          text: 'Utilisez notre section plats rapides pour trouver des dîners rapides en moins de 30 minutes. Vous pouvez également filtrer les recettes par niveau de difficulté "Facile" pour trouver des recettes simples adaptées aux débutants. Toutes nos recettes du quotidien sont faciles à suivre avec des instructions claires et des ingrédients disponibles.'
         }
       },
       {
         '@type': 'Question',
-        name: 'Finns det vegetariska och veganska recept?',
+        name: 'Y a-t-il des recettes végétariennes et véganes ?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Ja! Vi har ett stort urval av vegetariska recept och veganska alternativ. Använd våra filter för att hitta vegetarisk mat, vegansk mat eller glutenfria recept. Vi visar hur du kan laga näringsrik och god mat utan animaliska produkter.'
+          text: 'Oui ! Nous avons une large sélection de recettes végétariennes et d\'options véganes. Utilisez nos filtres pour trouver des plats végétariens, des plats véganes ou des recettes sans gluten. Nous montrons comment préparer des plats nutritifs et savoureux sans produits d\'origine animale.'
         }
       },
       {
         '@type': 'Question',
-        name: 'Vad gör Bakstundens recept speciella?',
+        name: 'Qu\'est-ce qui rend les recettes de Bonmets spéciales ?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Alla våra svenska matrecept är noggrant testade och innehåller detaljerade steg-för-steg instruktioner, tydliga ingredienslistor, näringsinformation och praktiska tips. Vi fokuserar på hemlagad mat med ingredienser du hittar i svenska mataffärer.'
+          text: 'Toutes nos recettes françaises sont soigneusement testées et contiennent des instructions détaillées étape par étape, des listes d\'ingrédients claires, des informations nutritionnelles et des conseils pratiques. Nous nous concentrons sur la cuisine maison avec des ingrédients que vous trouvez dans les épiceries françaises.'
         }
       },
       {
         '@type': 'Question',
-        name: 'Hur kan jag planera min veckomeny?',
+        name: 'Comment puis-je planifier mon menu de la semaine ?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Använd våra olika kategorier för att skapa en varierad veckomeny. Blanda kycklingrecept, fiskrätter, pasta och vegetariska middagar för en balanserad kost. Välj några snabba vardagsrätter för stressiga dagar och planera en mer avancerad helgmiddag när du har mer tid.'
+          text: 'Utilisez nos différentes catégories pour créer un menu hebdomadaire varié. Mélangez les recettes de poulet, les plats de poisson, les pâtes et les dîners végétariens pour une alimentation équilibrée. Choisissez quelques plats rapides du quotidien pour les jours stressants et planifiez un dîner de week-end plus élaboré quand vous avez plus de temps.'
         }
       }
     ]

@@ -1,143 +1,71 @@
 /**
- * Comprehensive food categories for Bakstunden
- * Organized for optimal user experience and SEO
+ * Catégories culinaires pour Bonmets
+ * Organisées pour une expérience utilisateur optimale et le SEO
  */
 
 export const PRIMARY_CATEGORIES = {
-  'kycklingfars': {
-    name: 'Kycklingfärs',
-    slug: 'kycklingfars-recept',
-    description: 'Saftiga kycklingfärsrecept för vardag och fest',
-    icon: '🍗',
-    color: 'from-orange-400 to-red-500',
-    image: '/images/recipes/italienska-kycklingkottbullar-i-graddig-sas.webp',
-    subcategories: ['Köttbullar', 'Färsbiffar', 'Köttfärs', 'Kycklingfärs']
+  'viandes': {
+    name: 'Viandes',
+    slug: 'viandes-recept',
+    description: 'Recettes de viandes savoureuses pour tous les goûts',
+    icon: '🍖',
+    color: 'from-[#FF7A7A] to-[#FFA07A]',
+    image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&h=600&fit=crop&q=80',
+    subcategories: ['Bœuf', 'Porc', 'Agneau', 'Veau', 'Volaille']
   },
-  'kyckling': {
-    name: 'Kyckling',
-    slug: 'kyckling-recept',
-    description: 'Mörbakat kycklingrecept med perfekt smak',
-    icon: '🐔',
-    color: 'from-yellow-400 to-orange-500',
-    image: '/images/recipes/varldens-godaste-kyckling-i-ugn.webp',
-    subcategories: ['Kycklingbröst', 'Kycklinglår', 'Hel kyckling', 'Kycklingfilé']
+  'poissons': {
+    name: 'Poissons',
+    slug: 'poissons-recept',
+    description: 'Recettes de poissons frais et fruits de mer',
+    icon: '🐟',
+    color: 'from-[#6FCF97] to-[#A8E6CF]',
+    image: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&h=600&fit=crop&q=80',
+    subcategories: ['Saumon', 'Thon', 'Cabillaud', 'Crevettes', 'Fruits de mer']
   },
-  'pasta': {
-    name: 'Pasta',
-    slug: 'pasta-recept',
-    description: 'Autentiska pastarecept från Italien och världen',
+  'legumes': {
+    name: 'Légumes',
+    slug: 'legumes-recept',
+    description: 'Recettes végétariennes et plats à base de légumes',
+    icon: '🥬',
+    color: 'from-[#6FCF97] to-[#A8E6CF]',
+    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&h=600&fit=crop&q=80',
+    subcategories: ['Salades', 'Légumes grillés', 'Ratatouille', 'Curry de légumes', 'Légumes rôtis']
+  },
+  'pates': {
+    name: 'Pâtes',
+    slug: 'pates-recept',
+    description: 'Recettes de pâtes authentiques et créatives',
     icon: '🍝',
-    color: 'from-yellow-400 to-orange-500',
-    image: '/images/pasta-recept-kyckling-svampsas.webp',
+    color: 'from-[#FF7A7A] to-[#FFA07A]',
+    image: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800&h=600&fit=crop&q=80',
     subcategories: ['Spaghetti', 'Penne', 'Fettuccine', 'Lasagne', 'Ravioli']
   },
-  'kycklinglarfile': {
-    name: 'Kycklinglårfilé',
-    slug: 'kycklinglarfile-recept',
-    description: 'Mör kycklinglårfilé med saftig smak',
-    icon: '🍖',
-    color: 'from-amber-400 to-yellow-500',
-    image: 'https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=800&h=600&fit=crop',
-    subcategories: ['Kycklinglår', 'Lårfilé', 'Kycklingben']
+  'desserts': {
+    name: 'Desserts',
+    slug: 'desserts-recept',
+    description: 'Desserts sucrés et gourmands pour finir le repas en beauté',
+    icon: '🍰',
+    color: 'from-[#FF7A7A] to-[#FFA07A]',
+    image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800&h=600&fit=crop&q=80',
+    subcategories: ['Gâteaux', 'Tartes', 'Mousses', 'Crèmes', 'Glaces']
   },
-  'lax': {
-    name: 'Lax',
-    slug: 'lax-recept',
-    description: 'Färsk lax med omega-3 och fantastisk smak',
-    icon: '🐟',
-    color: 'from-pink-400 to-red-500',
-    image: '/images/recipes/laxsallad-med-bulgur-avokado-och-korianderdressing.webp',
-    subcategories: ['Laxfilé', 'Gravad lax', 'Rökt lax', 'Laxburgare']
+  'sauce': {
+    name: 'Sauce',
+    slug: 'sauce-recept',
+    description: 'Sauces maison pour accompagner vos plats',
+    icon: '🥄',
+    color: 'from-[#FFA07A] to-[#6FCF97]',
+    image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&h=600&fit=crop&q=80',
+    subcategories: ['Sauces tomate', 'Sauces blanches', 'Vinaigrettes', 'Sauces épicées', 'Sauces crémeuses']
   },
-  'lasagne': {
-    name: 'Lasagne',
-    slug: 'lasagne-recept',
-    description: 'Klassisk lasagne med köttfärs och ost',
-    icon: '🍽️',
-    color: 'from-orange-400 to-red-500',
-    image: '/images/recipes/klassisk-lasagne.webp',
-    subcategories: ['Köttfärslasagne', 'Vegetarisk lasagne', 'Fiskelassagne']
-  },
-  'scones': {
-    name: 'Scones',
-    slug: 'scones-recept',
-    description: 'Fluffiga scones med te och sylt',
+  'patisserie': {
+    name: 'Pâtisserie',
+    slug: 'patisserie-recept',
+    description: 'Recettes de pâtisserie françaises et internationales',
     icon: '🥐',
-    color: 'from-amber-400 to-yellow-500',
-    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&h=600&fit=crop',
-    subcategories: ['Klassiska scones', 'Chokladscones', 'Fruktscones']
-  },
-  'vegetariska': {
-    name: 'Vegetariska',
-    slug: 'vegetariska-recept',
-    description: 'Näringsrika vegetariska recept för alla',
-    icon: '🌱',
-    color: 'from-green-400 to-emerald-500',
-    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&h=600&fit=crop',
-    subcategories: ['Vegetariska', 'Veganska', 'Plantbaserade']
-  },
-  'appelmos': {
-    name: 'Äppelmos',
-    slug: 'appelmos-recept',
-    description: 'Hemlagat äppelmos med kanel och socker',
-    icon: '🍎',
-    color: 'from-red-400 to-pink-500',
-    image: '/images/recipes/appelmos.webp',
-    subcategories: ['Klassiskt äppelmos', 'Kanelmos', 'Söta äpplen']
-  },
-  'kladdkaka': {
-    name: 'Kladdkaka',
-    slug: 'kladdkaka-recept',
-    description: 'Kladdig chokladkaka som smälter i munnen',
-    icon: '🍫',
-    color: 'from-amber-600 to-yellow-700',
-    image: '/images/recipes/kladdkaka-godaste-och-harligaste.webp',
-    subcategories: ['Kladdkaka', 'Chokladkaka', 'Brownies']
-  },
-  'chokladbollar': {
-    name: 'Chokladbollar recept',
-    slug: 'chokladbollar-recept',
-    description: 'Hemlagade chokladbollar utan bakning',
-    icon: '🍪',
-    color: 'from-amber-600 to-yellow-700',
-    image: '/images/recipes/Chokladbolla.png',
-    subcategories: ['Chokladbollar', 'Kokosbollar', 'No-bake']
-  },
-  'appelpaj': {
-    name: 'Äppelpaj',
-    slug: 'appelpaj-recept',
-    description: 'Klassisk äppelpaj med smuldeg och kanel',
-    icon: '🥧',
-    color: 'from-amber-400 to-orange-500',
-    image: '/images/recipes/appelpaj-klassisk-svensk.webp',
-    subcategories: ['Äppelpaj', 'Smuldeg', 'Fruktpaj']
-  },
-  'kaka-cookies': {
-    name: 'Kaka & cookies',
-    slug: 'kaka-cookies-recept',
-    description: 'Hemlagade kakor och cookies för fika',
-    icon: '🍪',
-    color: 'from-amber-400 to-yellow-500',
-    image: '/images/nygräddade-kakor-med-strössel-hero-banner.webp',
-    subcategories: ['Kakor', 'Cookies', 'Fikabröd']
-  },
-  'vafflor': {
-    name: 'Våfflor',
-    slug: 'vafflor-recept',
-    description: 'Fluffiga våfflor med sylt och grädde',
-    icon: '🧇',
-    color: 'from-yellow-400 to-orange-500',
-    image: '/images/recipes/belgiska-vafflor.webp',
-    subcategories: ['Klassiska våfflor', 'Belgiska våfflor', 'Frasvåfflor']
-  },
-  'pannkakor': {
-    name: 'Pannkakor',
-    slug: 'pannkakor-recept',
-    description: 'Svenska pannkakor med sylt och grädde',
-    icon: '🥞',
-    color: 'from-yellow-400 to-orange-500',
-    image: '/images/recipes/amerikanska-pannkakor.webp',
-    subcategories: ['Svenska pannkakor', 'Amerikanska pannkakor', 'Glutenfria pannkakor']
+    color: 'from-[#FF7A7A] to-[#6FCF97]',
+    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&h=600&fit=crop&q=80',
+    subcategories: ['Croissants', 'Éclairs', 'Macarons', 'Tartes', 'Choux']
   }
 };
 
@@ -207,7 +135,7 @@ export function getAllCategories() {
  * Get category by slug
  */
 export function getCategoryBySlug(slug) {
-  // Handle both 'kladdkaka' and 'kladdkaka-recept' formats
+  // Handle both 'viandes' and 'viandes-recept' formats
   const key = slug.replace('-recept', '');
   return PRIMARY_CATEGORIES[key];
 }

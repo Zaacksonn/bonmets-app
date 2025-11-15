@@ -33,24 +33,24 @@ export default function RecipeListingClient({ initialRecipes, categoryName = nul
 
   // Category descriptions
   const categoryDescriptions = {
-    'Vegetariskt': 'Gröna, färgglada och mättande vegetariska rätter som alla älskar. Från snabba vardagsmiddagar till festliga sallader.',
-    'Vardagsmat': 'Enkla och snabba recept för vardagens middagar. Perfekt när det ska gå fort men ändå vara gott!',
-    'Bakning': 'Doftande bullar, saftiga kakor och krispigt bröd. Allt du behöver för den perfekta fikastunden.',
-    'Pasta': 'Från klassisk carbonara till krämiga såser. Upptäck pastavärldens alla möjligheter.',
-    'Grillmat': 'Sommarens bästa recept för grillen. Marinader, spett och allt som smakar sommar.',
-    'Desserter': 'Söta avslutningar som imponerar. Från enkla efterrätter till avancerade bakverk.',
-    'Grytor & Soppor': 'Värmande och mättande soppor och grytor för alla årstider. Comfort food när den är som bäst.',
-    'Soppor': 'Värmande och mättande soppor för alla årstider. Comfort food när den är som bäst.',
-    'Sallader': 'Fräscha och färgglada sallader som mättar. Perfekt för lunch eller som tillbehör.',
-    'Kyckling': 'Mångsidiga kycklingrätter från hela världen. Allt från grillat till långkokt.',
-    'Fisk & Skaldjur': 'Havets läckerheter tillagade på bästa sätt. Enkla recept som lyfter fisken.',
-    'Fisk': 'Havets läckerheter tillagade på bästa sätt. Enkla recept som lyfter fisken.',
-    'Snabb middag': 'Klart på under 30 minuter! När tiden är knapp men du vill ha riktigt god mat.',
-    'Glutenfritt': 'Glutenfria godsaker som alla kan njuta av. Ingen kompromiss med smaken!',
-    'Kött': 'Saftiga och smakrika kötträtter för alla tillfällen. Från snabba middagar till långkok.',
-    'Höstens favoriter': 'Varma och mysiga rätter för hösten. Comfort food som värmer både kropp och själ.',
-    'Frukost': 'Starta dagen rätt med näringsrika och goda frukosträtter.',
-    'Tillbehör': 'Perfekta tillbehör som kompletterar huvudrätten.',
+    'Vegetariskt': 'Plats verts, colorés et rassasiants que tout le monde adore. Des dîners rapides du quotidien aux salades festives.',
+    'Vardagsmat': 'Recettes simples et rapides pour les dîners du quotidien. Parfait quand il faut aller vite mais que c\'est bon !',
+    'Bakning': 'Brioches parfumées, gâteaux moelleux et pain croustillant. Tout ce dont vous avez besoin pour le goûter parfait.',
+    'Pasta': 'De la carbonara classique aux sauces crémeuses. Découvrez toutes les possibilités du monde des pâtes.',
+    'Grillmat': 'Les meilleures recettes d\'été pour le barbecue. Marinades, brochettes et tout ce qui sent l\'été.',
+    'Desserter': 'Des fins de repas sucrées qui impressionnent. Des desserts simples aux pâtisseries élaborées.',
+    'Grytor & Soppor': 'Soupes et ragoûts réconfortants et rassasiants pour toutes les saisons. Le comfort food à son meilleur.',
+    'Soppor': 'Soupes réconfortantes et rassasiantes pour toutes les saisons. Le comfort food à son meilleur.',
+    'Sallader': 'Salades fraîches et colorées qui rassasient. Parfaites pour le déjeuner ou en accompagnement.',
+    'Kyckling': 'Plats de poulet polyvalents du monde entier. Du grillé au mijoté.',
+    'Fisk & Skaldjur': 'Les délices de la mer préparés à la perfection. Des recettes simples qui mettent le poisson en valeur.',
+    'Fisk': 'Les délices de la mer préparés à la perfection. Des recettes simples qui mettent le poisson en valeur.',
+    'Snabb middag': 'Prêt en moins de 30 minutes ! Quand le temps est compté mais que vous voulez vraiment de la bonne nourriture.',
+    'Glutenfritt': 'Délices sans gluten que tout le monde peut apprécier. Aucun compromis sur le goût !',
+    'Kött': 'Plats de viande juteux et savoureux pour toutes les occasions. Des dîners rapides aux mijotés.',
+    'Höstens favoriter': 'Plats chauds et réconfortants pour l\'automne. Le comfort food à son meilleur.',
+    'Frukost': 'Commencez la journée du bon pied avec des plats de petit déjeuner nutritifs et savoureux.',
+    'Tillbehör': 'Accompagnements parfaits qui complètent le plat principal.',
   };
 
   // Handle URL search params
@@ -116,12 +116,12 @@ export default function RecipeListingClient({ initialRecipes, categoryName = nul
             <h1 
               className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white font-playfair"
             >
-              Alla recept
+              Toutes les recettes
             </h1>
             <p 
               className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto font-inter"
             >
-              Utforska {recipes.length} provlagade recept för alla tillfällen
+              Explorez {recipes.length} recettes testées pour toutes les occasions
             </p>
           </div>
         )}
@@ -132,7 +132,7 @@ export default function RecipeListingClient({ initialRecipes, categoryName = nul
             <div className="flex-1">
             <EnhancedSearchBar
   onSearch={setSearchQuery}
-  placeholder="Sök recept, ingredienser eller taggar..."
+  placeholder="Rechercher des recettes, ingrédients ou tags..."
 />
             </div>
         <EnhancedRecipeFilter
@@ -148,17 +148,17 @@ export default function RecipeListingClient({ initialRecipes, categoryName = nul
             <label 
               className="text-sm font-semibold text-gray-700 dark:text-gray-300 font-inter"
             >
-              Sortera:
+              Trier :
             </label>
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="px-4 py-2.5 border border-gray-300 dark:border-gray-700 rounded-xl bg-white dark:bg-gray-900 focus:ring-2 focus:ring-purple-500 focus:border-transparent font-medium text-sm transition-all font-inter"
+              className="px-4 py-2.5 border border-gray-300 dark:border-gray-700 rounded-xl bg-white dark:bg-gray-900 focus:ring-2 focus:ring-[#FF7A7A] focus:border-transparent font-medium text-sm transition-all font-inter"
             >
-              <option value="newest">Nyaste först</option>
-              <option value="rating">Högst betyg</option>
-              <option value="quickest">Snabbast först</option>
-              <option value="title">Alfabetisk</option>
+              <option value="newest">Plus récentes d'abord</option>
+              <option value="rating">Meilleure note</option>
+              <option value="quickest">Plus rapides d'abord</option>
+              <option value="title">Alphabétique</option>
             </select>
           </div>
 
@@ -166,10 +166,10 @@ export default function RecipeListingClient({ initialRecipes, categoryName = nul
           {(searchQuery || Object.keys(filters).length > 0) && (
             <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
               <div className="flex items-center gap-2 flex-wrap">
-                <span className="text-sm font-medium">Aktiva filter:</span>
+                <span className="text-sm font-medium">Filtres actifs :</span>
                 {searchQuery && (
-                  <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">
-                    Sökning: &ldquo;{searchQuery}&rdquo;
+                  <span className="px-3 py-1 bg-[#FF7A7A]/10 dark:bg-[#6FCF97]/20 text-[#FF7A7A] dark:text-[#6FCF97] rounded-full text-sm">
+                    Recherche : &ldquo;{searchQuery}&rdquo;
                   </span>
                 )}
                 {filters.category && (
@@ -182,9 +182,9 @@ export default function RecipeListingClient({ initialRecipes, categoryName = nul
                     setFilters({});
                     setSearchQuery('');
                   }}
-                  className="text-sm text-purple-600 hover:text-purple-700 font-medium"
+                  className="text-sm text-[#FF7A7A] hover:text-[#6FCF97] font-medium"
                 >
-                  Rensa alla
+                  Tout effacer
                 </button>
               </div>
             </div>
@@ -197,7 +197,7 @@ export default function RecipeListingClient({ initialRecipes, categoryName = nul
             className="text-gray-600 dark:text-gray-400 font-medium"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
-            Visar <span className="font-bold text-purple-600">{filteredRecipes.length}</span> recept
+            Affichage de <span className="font-bold text-[#FF7A7A]">{filteredRecipes.length}</span> recettes
           </p>
         </div>
 
@@ -231,19 +231,19 @@ export default function RecipeListingClient({ initialRecipes, categoryName = nul
               className="text-2xl font-bold mb-4 text-gray-900 dark:text-white"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              Inga recept hittades
+              Aucune recette trouvée
             </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              Prova att justera dina filter eller sök efter något annat
+              Essayez d'ajuster vos filtres ou de rechercher autre chose
             </p>
             <button
               onClick={() => {
                 setFilters({});
                 setSearchQuery('');
               }}
-              className="px-6 py-3 bg-purple-600 text-white rounded-full hover:bg-purple-700 font-semibold transition-colors"
+              className="px-6 py-3 bg-[#FF7A7A] text-white rounded-full hover:bg-[#6FCF97] font-semibold transition-colors"
             >
-              Återställ alla filter
+              Réinitialiser tous les filtres
             </button>
           </div>
         )}
@@ -256,24 +256,24 @@ export default function RecipeListingClient({ initialRecipes, categoryName = nul
               className="text-3xl md:text-4xl font-bold mb-6"
               style={{ fontFamily: "'Playfair Display', 'Georgia', serif" }}
             >
-              Hittade du inte vad du sökte?
+              Vous n'avez pas trouvé ce que vous cherchiez ?
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-              Vi lägger till nya recept varje vecka. Prenumerera på vårt nyhetsbrev så missar du inget!
+              Nous ajoutons de nouvelles recettes chaque semaine. Abonnez-vous à notre newsletter pour ne rien manquer !
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/"
-                className="inline-flex items-center justify-center px-8 py-3 bg-purple-600 text-white rounded-full font-semibold hover:bg-purple-700 transition-colors shadow-lg"
+                className="inline-flex items-center justify-center px-8 py-3 bg-[#FF7A7A] text-white rounded-full font-semibold hover:bg-[#6FCF97] transition-colors shadow-lg"
               >
-                Till startsidan
+                Retour à l'accueil
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 href="/blogg"
                 className="inline-flex items-center px-8 py-3 border-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white rounded-full font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
               >
-                Läs våra matguider
+                Lire nos guides culinaires
               </Link>
             </div>
           </div>

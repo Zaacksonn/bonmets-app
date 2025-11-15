@@ -10,10 +10,10 @@ export default function SmartInternalLinks({ links, currentRecipe }) {
   if (!links || links.length === 0) return null;
 
   return (
-    <section className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-8 mb-12">
+    <section className="bg-gradient-to-br from-blue-50 to-[#FF7A7A]/10 dark:from-blue-900/20 dark:to-[#6FCF97]/20 rounded-2xl p-8 mb-12">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
-          <ArrowRight className="w-6 h-6 mr-3 text-purple-600" />
+          <ArrowRight className="w-6 h-6 mr-3 text-[#FF7A7A]" />
           Du kanske också gillar
         </h2>
         
@@ -30,7 +30,7 @@ export default function SmartInternalLinks({ links, currentRecipe }) {
                   <Link
                     key={recipe.slug}
                     href={`/recept/${recipe.slug}`}
-                    className="group bg-gray-50 dark:bg-gray-700 rounded-lg p-4 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-all duration-300 hover:scale-105"
+                    className="group bg-gray-50 dark:bg-gray-700 rounded-lg p-4 hover:bg-[#FF7A7A]/10 dark:hover:bg-[#6FCF97]/20 transition-all duration-300 hover:scale-105"
                   >
                     <div className="flex items-start space-x-3">
                       {recipe.heroImage?.src && (
@@ -46,7 +46,7 @@ export default function SmartInternalLinks({ links, currentRecipe }) {
                       )}
                       
                       <div className="flex-1 min-w-0">
-                        <h4 className="font-medium text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors line-clamp-2">
+                        <h4 className="font-medium text-gray-900 dark:text-white group-hover:text-[#FF7A7A] dark:group-hover:text-[#6FCF97] transition-colors line-clamp-2">
                           {recipe.title}
                         </h4>
                         
@@ -87,13 +87,13 @@ export default function SmartInternalLinks({ links, currentRecipe }) {
  */
 function getLinkGroupIcon(type) {
   const icons = {
-    related: <ChefHat className="w-5 h-5 text-purple-600" />,
+    related: <ChefHat className="w-5 h-5 text-[#FF7A7A]" />,
     ingredients: <Utensils className="w-5 h-5 text-green-600" />,
     techniques: <ChefHat className="w-5 h-5 text-blue-600" />,
     seasonal: <Calendar className="w-5 h-5 text-orange-600" />
   };
   
-  return icons[type] || <ChefHat className="w-5 h-5 text-purple-600" />;
+  return icons[type] || <ChefHat className="w-5 h-5 text-[#FF7A7A]" />;
 }
 
 /**
@@ -153,8 +153,8 @@ export function CategoryNavigation({ categories, currentCategory }) {
               href={`/kategorier/${category.slug}`}
               className={`p-4 rounded-lg text-center transition-all duration-300 ${
                 currentCategory === category.slug
-                  ? 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300'
-                  : 'bg-gray-50 dark:bg-gray-700 hover:bg-purple-50 dark:hover:bg-purple-900/20 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400'
+                  ? 'bg-[#FF7A7A]/10 dark:bg-[#6FCF97]/20 text-[#FF7A7A] dark:text-[#6FCF97]'
+                  : 'bg-gray-50 dark:bg-gray-700 hover:bg-[#FF7A7A]/10 dark:hover:bg-[#6FCF97]/20 text-gray-700 dark:text-gray-300 hover:text-[#FF7A7A] dark:hover:text-[#6FCF97]'
               }`}
             >
               <div className="text-2xl mb-2">{category.icon}</div>

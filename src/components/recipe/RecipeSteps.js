@@ -32,7 +32,7 @@ export default function RecipeSteps({ steps }) {
                 className={`absolute left-0 -translate-x-1/2 w-8 h-8 rounded-full border-2 flex items-center justify-center transition-all ${
                   isCompleted
                     ? 'bg-green-500 border-green-500 text-white'
-                    : 'bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-700 hover:border-purple-500'
+                    : 'bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-700 hover:border-[#FF7A7A] dark:hover:border-[#6FCF97]'
                 }`}
                 aria-label={isCompleted ? 'Marquer comme non terminé' : 'Marquer comme terminé'}
               >

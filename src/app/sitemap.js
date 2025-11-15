@@ -32,12 +32,6 @@ export default async function sitemap() {
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/repas`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
       url: `${baseUrl}/plats-rapides`,
       lastModified: new Date(),
       changeFrequency: 'weekly',

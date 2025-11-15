@@ -55,7 +55,7 @@ export default function EnhancedKategorierClient({
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#FFF8F3] to-white dark:from-gray-900 dark:to-gray-800">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 text-white overflow-hidden">
+      <section className="relative py-20 bg-gradient-to-r from-[#FF7A7A] via-[#FFA07A] to-[#6FCF97] text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -102,7 +102,7 @@ export default function EnhancedKategorierClient({
                 placeholder="Sök kategorier..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#FF7A7A] focus:border-transparent dark:bg-gray-700 dark:text-white"
               />
             </div>
 
@@ -111,7 +111,7 @@ export default function EnhancedKategorierClient({
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 dark:bg-gray-700 dark:text-white"
+                className="px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#FF7A7A] dark:bg-gray-700 dark:text-white"
               >
                 <option value="popular">Mest populära</option>
                 <option value="alphabetical">Alfabetisk</option>
@@ -121,13 +121,13 @@ export default function EnhancedKategorierClient({
               <div className="flex border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden">
                 <button
                   onClick={() => setViewMode('grid')}
-                  className={`p-3 ${viewMode === 'grid' ? 'bg-purple-600 text-white' : 'bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-300'}`}
+                  className={`p-3 ${viewMode === 'grid' ? 'bg-[#FF7A7A] text-white' : 'bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-300'}`}
                 >
                   <Grid className="w-5 h-5" />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
-                  className={`p-3 ${viewMode === 'list' ? 'bg-purple-600 text-white' : 'bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-300'}`}
+                  className={`p-3 ${viewMode === 'list' ? 'bg-[#FF7A7A] text-white' : 'bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-300'}`}
                 >
                   <List className="w-5 h-5" />
                 </button>
@@ -147,7 +147,7 @@ export default function EnhancedKategorierClient({
             className="text-center mb-12"
           >
             <div className="flex items-center justify-center gap-2 mb-4">
-              <TrendingUp className="w-8 h-8 text-purple-600" />
+              <TrendingUp className="w-8 h-8 text-[#FF7A7A]" />
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
                 Populära Kategorier
               </h2>
@@ -196,10 +196,10 @@ export default function EnhancedKategorierClient({
                         {category.description}
                       </p>
                       <div className="flex items-center justify-between mt-4">
-                        <span className="text-purple-600 dark:text-purple-400 font-semibold text-sm">
+                        <span className="text-[#FF7A7A] dark:text-[#6FCF97] font-semibold text-sm">
                           Utforska recept
                         </span>
-                        <ArrowRight className="w-4 h-4 text-purple-600 dark:text-purple-400 group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight className="w-4 h-4 text-[#FF7A7A] dark:text-[#6FCF97] group-hover:translate-x-1 transition-transform" />
                       </div>
                     </div>
                   </div>
@@ -302,7 +302,7 @@ export default function EnhancedKategorierClient({
                             <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                               {category.name}
                             </h3>
-                            <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium">
+                            <span className="px-3 py-1 bg-[#FF7A7A]/10 dark:bg-[#6FCF97]/20 text-[#FF7A7A] dark:text-[#6FCF97] rounded-full text-sm font-medium">
                               {category.count} recept
                             </span>
                           </div>
@@ -310,7 +310,7 @@ export default function EnhancedKategorierClient({
                             {category.description}
                           </p>
                         </div>
-                        <ArrowRight className="w-6 h-6 text-gray-400 group-hover:text-purple-600 group-hover:translate-x-1 transition-all" />
+                        <ArrowRight className="w-6 h-6 text-gray-400 group-hover:text-[#FF7A7A] dark:group-hover:text-[#6FCF97] group-hover:translate-x-1 transition-all" />
                       </div>
                     </div>
                   </Link>
@@ -330,7 +330,7 @@ export default function EnhancedKategorierClient({
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <Sparkles className="w-12 h-12 mx-auto mb-4 text-purple-600" />
+            <Sparkles className="w-12 h-12 mx-auto mb-4 text-[#FF7A7A]" />
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
               Vanliga Frågor om Kategorier
             </h2>
@@ -383,7 +383,7 @@ export default function EnhancedKategorierClient({
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
+      <section className="py-16 bg-gradient-to-r from-[#FF7A7A] to-[#6FCF97] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -400,7 +400,7 @@ export default function EnhancedKategorierClient({
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/recept"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#FF7A7A] font-semibold rounded-lg hover:shadow-lg hover:text-[#6FCF97] transform hover:scale-105 transition-all duration-300"
               >
                 Utforska Alla Recept
                 <ArrowRight className="w-5 h-5" />

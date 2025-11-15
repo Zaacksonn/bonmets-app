@@ -102,9 +102,9 @@ export default function EnhancedCategoryClient({
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center p-4 rounded-lg bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20"
+              className="text-center p-4 rounded-lg bg-gradient-to-br from-[#FF7A7A]/10 to-[#FFA07A]/10 dark:from-[#FF7A7A]/20 dark:to-[#6FCF97]/20"
             >
-              <div className="text-3xl md:text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">
+              <div className="text-3xl md:text-4xl font-bold text-[#FF7A7A] dark:text-[#6FCF97] mb-2">
                 {recipes.length}
               </div>
               <div className="text-sm md:text-base text-gray-600 dark:text-gray-400">
@@ -188,7 +188,7 @@ export default function EnhancedCategoryClient({
                   transition={{ delay: index * 0.05 }}
                   className="bg-white dark:bg-gray-800 rounded-lg p-4 text-center hover:shadow-lg transition-shadow cursor-pointer border border-gray-200 dark:border-gray-700"
                 >
-                  <ChefHat className="w-8 h-8 mx-auto mb-2 text-purple-600 dark:text-purple-400" />
+                  <ChefHat className="w-8 h-8 mx-auto mb-2 text-[#FF7A7A] dark:text-[#6FCF97]" />
                   <h3 className="font-semibold text-gray-900 dark:text-white text-sm md:text-base">
                     {sub}
                   </h3>
@@ -215,7 +215,7 @@ export default function EnhancedCategoryClient({
                   onClick={() => setActiveFilter(filter)}
                   className={`px-4 md:px-6 py-2 rounded-full text-sm md:text-base font-medium transition-all ${
                     activeFilter === filter
-                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
+                      ? 'bg-gradient-to-r from-[#FF7A7A] to-[#6FCF97] text-white shadow-lg'
                       : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700'
                   }`}
                 >
@@ -248,7 +248,7 @@ export default function EnhancedCategoryClient({
             <div className="text-center mt-12">
               <button
                 onClick={() => setDisplayCount(prev => prev + 12)}
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#FF7A7A] to-[#6FCF97] text-white font-semibold rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300"
               >
                 Visa fler recept
                 <ArrowRight className="w-5 h-5" />
@@ -259,7 +259,7 @@ export default function EnhancedCategoryClient({
       </section>
 
       {/* Tips Section */}
-      <section className="py-16 bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50 dark:from-purple-900/10 dark:via-pink-900/10 dark:to-orange-900/10">
+      <section className="py-16 bg-gradient-to-br from-[#FF7A7A]/10 via-[#FFA07A]/10 to-[#6FCF97]/10 dark:from-[#FF7A7A]/10 dark:via-[#6FCF97]/10 dark:to-[#6FCF97]/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -267,7 +267,7 @@ export default function EnhancedCategoryClient({
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <Sparkles className="w-12 h-12 mx-auto mb-4 text-purple-600 dark:text-purple-400" />
+            <Sparkles className="w-12 h-12 mx-auto mb-4 text-[#FF7A7A] dark:text-[#6FCF97]" />
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
               Tips för Perfekt {category.name}
             </h2>
@@ -365,7 +365,7 @@ export default function EnhancedCategoryClient({
             className="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700"
           >
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
-              <BookOpen className="w-6 h-6 mr-3 text-purple-600" />
+              <BookOpen className="w-6 h-6 mr-3 text-[#FF7A7A]" />
               Vanliga frågor om {category.name}
             </h2>
             <div className="space-y-4">
@@ -373,7 +373,7 @@ export default function EnhancedCategoryClient({
                 <details key={index} className="group">
                   <summary className="flex items-center justify-between w-full p-4 bg-gray-50 dark:bg-gray-700 rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">
                     <span className="font-medium text-gray-900 dark:text-white">{faq.question}</span>
-                    <span className="text-purple-600 group-open:rotate-180 transition-transform">▼</span>
+                    <span className="text-[#FF7A7A] group-open:rotate-180 transition-transform">▼</span>
                   </summary>
                   <div className="p-4 bg-white dark:bg-gray-800 rounded-b-lg">
                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{faq.answer}</p>
@@ -386,7 +386,7 @@ export default function EnhancedCategoryClient({
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
+      <section className="py-16 bg-gradient-to-r from-[#FF7A7A] to-[#6FCF97] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -402,7 +402,7 @@ export default function EnhancedCategoryClient({
             </p>
             <Link
               href="/recept"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#FF7A7A] font-semibold rounded-lg hover:shadow-lg hover:text-[#6FCF97] transform hover:scale-105 transition-all duration-300"
             >
               Utforska Alla Recept
               <ArrowRight className="w-5 h-5" />

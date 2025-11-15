@@ -116,7 +116,7 @@ export default function EnhancedHomeClient({
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/recettes"
-                  className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center"
+                  className="bg-[#FF7A7A] hover:bg-[#6FCF97] text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center"
                 >
                   Découvrir toutes les recettes
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -154,7 +154,7 @@ export default function EnhancedHomeClient({
               Recherches les plus populaires
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400">
-              Populära recept som andra älskar
+              Recettes populaires que les autres adorent
             </p>
           </div>
           
@@ -193,7 +193,7 @@ export default function EnhancedHomeClient({
                     
                     {/* Minimal action section */}
                     <div className="bg-white dark:bg-gray-800 p-4 border-t border-gray-100 dark:border-gray-700">
-                      <div className="flex items-center justify-center text-gray-600 dark:text-gray-400 text-sm font-medium group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                      <div className="flex items-center justify-center text-gray-600 dark:text-gray-400 text-sm font-medium group-hover:text-[#FF7A7A] dark:group-hover:text-[#6FCF97] transition-colors">
                         <span>Explorer les recettes</span>
                         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                       </div>
@@ -215,7 +215,7 @@ export default function EnhancedHomeClient({
               Recettes mises en avant
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400">
-              Våra mest populära och älskade recept
+              Nos recettes les plus populaires et appréciées
             </p>
           </div>
           
@@ -238,7 +238,7 @@ export default function EnhancedHomeClient({
           <div className="text-center mt-12">
             <Link
               href="/recettes"
-              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center"
+              className="bg-[#FF7A7A] hover:bg-[#6FCF97] text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center"
             >
               Voir toutes les recettes
               <ArrowRight className="ml-2 w-5 h-5" />
@@ -306,20 +306,20 @@ export default function EnhancedHomeClient({
             </h2>
             <div className="prose prose-lg max-w-none text-gray-700 dark:text-gray-300 text-left space-y-4">
               <p>
-                Bonmets est votre source ultime pour les <Link href="/recettes" className="text-purple-600 hover:text-purple-700 font-semibold">recettes</Link>, la <strong>pâtisserie</strong> et les guides de cuisine. 
+                Bonmets est votre source ultime pour les <Link href="/recettes" className="text-[#FF7A7A] hover:text-[#6FCF97] font-semibold">recettes</Link>, la <strong>pâtisserie</strong> et les guides de cuisine. 
                 Nous proposons plus de {totalRecipes} recettes testées pour tous les goûts – des 
-                <Link href="/plats-rapides" className="text-purple-600 hover:text-purple-700 font-semibold">repas rapides</Link> du quotidien aux menus de fête.
+                <Link href="/plats-rapides" className="text-[#FF7A7A] hover:text-[#6FCF97] font-semibold">repas rapides</Link> du quotidien aux menus de fête.
               </p>
               <p>
-                Que vous cherchiez des <Link href="/categories/kyckling-recept" className="text-purple-600 hover:text-purple-700 font-semibold">recettes de poulet</Link>, des <Link href="/categories/vegetariska-recept" className="text-purple-600 hover:text-purple-700 font-semibold">plats végétariens</Link>, 
-                des options sans gluten ou des classiques comme les 
-                <Link href="/categories/pannkakor-recept" className="text-purple-600 hover:text-purple-700 font-semibold">crêpes</Link> et le <Link href="/categories/kladdkaka-recept" className="text-purple-600 hover:text-purple-700 font-semibold">gâteau au chocolat</Link>, tout est ici 
-                sur Bonmets. Nos <Link href="/recettes" className="text-purple-600 hover:text-purple-700 font-semibold">recettes</Link> sont sélectionnées et testées pour garantir votre réussite.
+                Que vous cherchiez des <Link href="/categories/kyckling-recept" className="text-[#FF7A7A] hover:text-[#6FCF97] font-semibold">recettes de poulet</Link>, des <Link href="/categories/vegetariska-recept" className="text-[#FF7A7A] hover:text-[#6FCF97] font-semibold">plats végétariens</Link>,
+                des options sans gluten ou des classiques comme les
+                <Link href="/categories/pannkakor-recept" className="text-[#FF7A7A] hover:text-[#6FCF97] font-semibold">crêpes</Link> et le <Link href="/categories/kladdkaka-recept" className="text-[#FF7A7A] hover:text-[#6FCF97] font-semibold">gâteau au chocolat</Link>, tout est ici
+                sur Bonmets. Nos <Link href="/recettes" className="text-[#FF7A7A] hover:text-[#6FCF97] font-semibold">recettes</Link> sont sélectionnées et testées pour garantir votre réussite.
               </p>
               <p>
-                Nous pensons que cuisiner doit être simple et agréable. Chaque <Link href="/recettes" className="text-purple-600 hover:text-purple-700 font-semibold">recette</Link> 
-                comprend des étapes claires, une liste d’ingrédients précise, des informations nutritionnelles et des astuces pratiques.
-                Du petit déjeuner au dessert – retrouvez <Link href="/categories" className="text-purple-600 hover:text-purple-700 font-semibold">les catégories</Link> qui facilitent votre cuisine.
+                Nous pensons que cuisiner doit être simple et agréable. Chaque <Link href="/recettes" className="text-[#FF7A7A] hover:text-[#6FCF97] font-semibold">recette</Link>
+                comprend des étapes claires, une liste d'ingrédients précise, des informations nutritionnelles et des astuces pratiques.
+                Du petit déjeuner au dessert – retrouvez <Link href="/categories" className="text-[#FF7A7A] hover:text-[#6FCF97] font-semibold">les catégories</Link> qui facilitent votre cuisine.
               </p>
             </div>
           </div>
@@ -340,13 +340,13 @@ export default function EnhancedHomeClient({
               transition={{ delay: 0.1 }}
               className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md"
             >
-              <Utensils className="w-12 h-12 text-purple-600 mb-4" />
+              <Utensils className="w-12 h-12 text-[#FF7A7A] mb-4" />
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                 Recettes testées
               </h3>
               <p className="text-gray-600 dark:text-gray-400">
-                Alla våra matrecept är noggrant testade i vårt kök. Vi garanterar att du får perfekta resultat 
-                varje gång du följer våra steg-för-steg instruktioner för matlagning och bakning.
+                Toutes nos recettes sont soigneusement testées dans notre cuisine. Nous garantissons des résultats parfaits 
+                chaque fois que vous suivez nos instructions étape par étape pour la cuisine et la pâtisserie.
               </p>
             </motion.div>
 
@@ -357,13 +357,13 @@ export default function EnhancedHomeClient({
               transition={{ delay: 0.2 }}
               className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md"
             >
-              <Clock className="w-12 h-12 text-purple-600 mb-4" />
+              <Clock className="w-12 h-12 text-[#FF7A7A] mb-4" />
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                 Recettes rapides du quotidien
               </h3>
               <p className="text-gray-600 dark:text-gray-400">
-                Behöver du <strong>snabba middagar</strong> under 30 minuter? Vi har massor av enkla recept 
-                för vardagen som är perfekta när tiden är knapp men du ändå vill servera hemlagad, god mat.
+                Besoin de <strong>repas rapides</strong> en moins de 30 minutes ? Nous avons de nombreuses recettes simples 
+                pour le quotidien, parfaites quand le temps est compté mais que vous voulez quand même servir des plats faits maison et savoureux.
               </p>
             </motion.div>
 
@@ -374,13 +374,13 @@ export default function EnhancedHomeClient({
               transition={{ delay: 0.3 }}
               className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md"
             >
-              <Heart className="w-12 h-12 text-purple-600 mb-4" />
+              <Heart className="w-12 h-12 text-[#FF7A7A] mb-4" />
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                 Options saines
               </h3>
               <p className="text-gray-600 dark:text-gray-400">
-                Upptäck våra <strong>vegetariska recept</strong>, veganska alternativ och 
-                glutenfria maträtter. Vi visar att hälsosam mat kan vara både god och enkel att laga.
+                Découvrez nos <strong>recettes végétariennes</strong>, options véganes et 
+                plats sans gluten. Nous montrons qu'une alimentation saine peut être à la fois savoureuse et facile à préparer.
               </p>
             </motion.div>
 
@@ -391,13 +391,13 @@ export default function EnhancedHomeClient({
               transition={{ delay: 0.4 }}
               className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md"
             >
-              <Globe className="w-12 h-12 text-purple-600 mb-4" />
+              <Globe className="w-12 h-12 text-[#FF7A7A] mb-4" />
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                 Favoris incontournables
               </h3>
               <p className="text-gray-600 dark:text-gray-400">
-                Älskar du klassisk svensk mat? Vi har de bästa recepten på svenska pannkakor, 
-                köttbullar, kladdkaka och andra traditionella svenska rätter.
+                Vous aimez les classiques de la cuisine française ? Nous avons les meilleures recettes de crêpes françaises, 
+                quiches, gâteaux au chocolat et autres plats traditionnels français.
               </p>
             </motion.div>
           </div>
@@ -412,8 +412,8 @@ export default function EnhancedHomeClient({
               Astuces cuisine pour de meilleurs résultats
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Lär dig våra bästa tips för att lyckas med matlagning och bakning. 
-              Här delar vi med oss av kunskap som gör dig till en bättre kock.
+              Apprenez nos meilleurs conseils pour réussir en cuisine et en pâtisserie. 
+              Nous partageons ici des connaissances qui feront de vous un meilleur cuisinier.
             </p>
           </div>
 
@@ -429,10 +429,10 @@ export default function EnhancedHomeClient({
                 Conseils pour des repas rapides
               </h3>
               <p className="text-gray-700 dark:text-gray-300 mb-3">
-                Förbered ingredienser i förväg för att spara tid. Hacka grönsaker, marinera kött och mät upp kryddor 
-                innan du börjar laga mat. Detta gör matlagningen mycket snabbare och smidigare.
+                Préparez les ingrédients à l'avance pour gagner du temps. Hachez les légumes, marinez la viande et mesurez les épices 
+                avant de commencer à cuisiner. Cela rend la cuisine beaucoup plus rapide et fluide.
               </p>
-              <Link href="/plats-rapides" className="text-purple-600 hover:text-purple-700 font-semibold inline-flex items-center">
+              <Link href="/plats-rapides" className="text-[#FF7A7A] hover:text-[#6FCF97] font-semibold inline-flex items-center">
                 En savoir plus <ArrowRight className="w-4 h-4 ml-1" />
               </Link>
             </motion.div>
@@ -446,14 +446,14 @@ export default function EnhancedHomeClient({
             >
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center">
                 <Star className="w-6 h-6 text-yellow-500 mr-2" />
-                Bakningstips för perfekta resultat
+                Conseils de pâtisserie pour des résultats parfaits
               </h3>
               <p className="text-gray-700 dark:text-gray-300 mb-3">
-                Mät alltid ingredienserna noggrant när du bakar. Använd rumstempererade ingredienser 
-                för bästa resultat i kakor, tårtor och bröd. 
-                Förvärm ugnen i god tid innan du börjar baka.
+                Mesurez toujours les ingrédients avec précision lors de la pâtisserie. Utilisez des ingrédients à température ambiante 
+                pour de meilleurs résultats dans les gâteaux, tartes et pains. 
+                Préchauffez le four bien à l'avance avant de commencer à cuire.
               </p>
-              <Link href="/categories/kladdkaka-recept" className="text-purple-600 hover:text-purple-700 font-semibold inline-flex items-center">
+              <Link href="/categories/kladdkaka-recept" className="text-[#FF7A7A] hover:text-[#6FCF97] font-semibold inline-flex items-center">
                 Voir les recettes de pâtisserie <ArrowRight className="w-4 h-4 ml-1" />
               </Link>
             </motion.div>
@@ -467,13 +467,13 @@ export default function EnhancedHomeClient({
             >
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 flex items-center">
                 <Users className="w-6 h-6 text-yellow-500 mr-2" />
-                Portionsanpassning
+                Ajustement des portions
               </h3>
               <p className="text-gray-700 dark:text-gray-300 mb-3">
-                Behöver du justera recept för fler eller färre personer? Multiplicera eller dividera 
-                ingredienserna proportionellt. Tänk på att tillagningstider kan behöva justeras vid större portioner.
+                Besoin d'ajuster une recette pour plus ou moins de personnes ? Multipliez ou divisez 
+                les ingrédients proportionnellement. Notez que les temps de cuisson peuvent nécessiter un ajustement pour de plus grandes portions.
               </p>
-              <Link href="/recettes" className="text-purple-600 hover:text-purple-700 font-semibold inline-flex items-center">
+              <Link href="/recettes" className="text-[#FF7A7A] hover:text-[#6FCF97] font-semibold inline-flex items-center">
                 Explorer toutes les recettes <ArrowRight className="w-4 h-4 ml-1" />
               </Link>
             </motion.div>
@@ -482,20 +482,20 @@ export default function EnhancedHomeClient({
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-purple-600">
+      <section className="py-16 bg-[#FF7A7A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold text-white mb-2">{totalRecipes}+</div>
-              <div className="text-purple-200">Testade recept för alla tillfällen</div>
+              <div className="text-white/90">Recettes testées pour toutes les occasions</div>
             </div>
             <div>
               <div className="text-4xl font-bold text-white mb-2">15+</div>
-              <div className="text-purple-200">Kategorier från frukost till dessert</div>
+              <div className="text-white/90">Catégories du petit déjeuner au dessert</div>
             </div>
             <div>
               <div className="text-4xl font-bold text-white mb-2">100%</div>
-              <div className="text-purple-200">Svenska recept med steg-för-steg guide</div>
+              <div className="text-white/90">Recettes françaises avec guide étape par étape</div>
             </div>
           </div>
         </div>
@@ -505,7 +505,7 @@ export default function EnhancedHomeClient({
       <section className="py-16 bg-white dark:bg-gray-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
-            Vanliga frågor om matlagning och bakning
+            Questions fréquentes sur la cuisine et la pâtisserie
           </h2>
           <div className="space-y-6">
             <motion.div
@@ -515,15 +515,15 @@ export default function EnhancedHomeClient({
               className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg"
             >
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                Vilka typer av recept finns på Bakstunden?
+                Quels types de recettes trouve-t-on sur Bonmets ?
               </h3>
               <p className="text-gray-700 dark:text-gray-300">
-                På Bakstunden hittar du över {totalRecipes} <Link href="/recept" className="text-purple-600 hover:text-purple-700 underline">matrecept</Link> inom kategorier som 
-                frukost, lunch, middag, <Link href="/snabbmat" className="text-purple-600 hover:text-purple-700 underline">snabbmat</Link>, 
-                bakning och dessert. Vi har allt från <Link href="/kategorier/pannkakor-recept" className="text-purple-600 hover:text-purple-700 underline">pannkakor</Link> och 
-                <Link href="/kategorier/vafflor-recept" className="text-purple-600 hover:text-purple-700 underline">våfflor</Link> till <Link href="/kategorier/kyckling-recept" className="text-purple-600 hover:text-purple-700 underline">kycklingrecept</Link>, <Link href="/kategorier/pasta-recept" className="text-purple-600 hover:text-purple-700 underline">pasta</Link>, 
-                <Link href="/kategorier/vegetariska-recept" className="text-purple-600 hover:text-purple-700 underline">vegetariska rätter</Link> och klassisk svensk bakning som 
-                <Link href="/kategorier/kladdkaka-recept" className="text-purple-600 hover:text-purple-700 underline">kladdkaka</Link> och <Link href="/kategorier/chokladbollar-recept" className="text-purple-600 hover:text-purple-700 underline">choklad bollar</Link>.
+                Sur Bonmets, vous trouverez plus de {totalRecipes} <Link href="/recettes" className="text-[#FF7A7A] hover:text-[#6FCF97] underline">recettes</Link> dans des catégories comme 
+                petit déjeuner, déjeuner, dîner, <Link href="/plats-rapides" className="text-[#FF7A7A] hover:text-[#6FCF97] underline">plats rapides</Link>, 
+                pâtisserie et dessert. Nous avons tout, des <Link href="/categories/pannkakor-recept" className="text-[#FF7A7A] hover:text-[#6FCF97] underline">crêpes</Link> aux 
+                <Link href="/categories/vafflor-recept" className="text-[#FF7A7A] hover:text-[#6FCF97] underline">gaufres</Link>, en passant par les <Link href="/categories/kyckling-recept" className="text-[#FF7A7A] hover:text-[#6FCF97] underline">recettes de poulet</Link>, les <Link href="/categories/pasta-recept" className="text-[#FF7A7A] hover:text-[#6FCF97] underline">pâtes</Link>, 
+                les <Link href="/categories/vegetariska-recept" className="text-[#FF7A7A] hover:text-[#6FCF97] underline">plats végétariens</Link> et les classiques de la pâtisserie française comme 
+                le <Link href="/categories/kladdkaka-recept" className="text-[#FF7A7A] hover:text-[#6FCF97] underline">gâteau au chocolat</Link> et les <Link href="/categories/chokladbollar-recept" className="text-[#FF7A7A] hover:text-[#6FCF97] underline">boules de chocolat</Link>.
               </p>
             </motion.div>
 
@@ -535,13 +535,13 @@ export default function EnhancedHomeClient({
               className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg"
             >
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                Hur hittar jag enkla recept för vardagen?
+                Comment trouver des recettes simples pour le quotidien ?
               </h3>
               <p className="text-gray-700 dark:text-gray-300">
-                Använd vår <Link href="/snabbmat" className="text-purple-600 hover:text-purple-700 underline">snabbmat-sektion</Link> för att hitta snabba middagar under 30 minuter. 
-                Du kan också filtrera <Link href="/recept" className="text-purple-600 hover:text-purple-700 underline">recept</Link> på svårighetsgrad &quot;Lätt&quot; för att hitta enkla recept som passar 
-                nybörjare. Alla våra <Link href="/recept" className="text-purple-600 hover:text-purple-700 underline">vardagsrecept</Link> är enkla att följa med tydliga instruktioner och 
-                tillgängliga ingredienser från din lokala mataffär.
+                Utilisez notre <Link href="/plats-rapides" className="text-[#FF7A7A] hover:text-[#6FCF97] underline">section plats rapides</Link> pour trouver des dîners rapides en moins de 30 minutes. 
+                Vous pouvez également filtrer les <Link href="/recettes" className="text-[#FF7A7A] hover:text-[#6FCF97] underline">recettes</Link> par niveau de difficulté &quot;Facile&quot; pour trouver des recettes simples adaptées 
+                aux débutants. Toutes nos <Link href="/recettes" className="text-[#FF7A7A] hover:text-[#6FCF97] underline">recettes du quotidien</Link> sont faciles à suivre avec des instructions claires et 
+                des ingrédients disponibles dans votre épicerie locale.
               </p>
             </motion.div>
 
@@ -553,13 +553,13 @@ export default function EnhancedHomeClient({
               className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg"
             >
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                Finns det vegetariska och veganska recept?
+                Y a-t-il des recettes végétariennes et véganes ?
               </h3>
               <p className="text-gray-700 dark:text-gray-300">
-                Ja! Vi har ett stort urval av <Link href="/kategorier/vegetariska-recept" className="text-purple-600 hover:text-purple-700 underline">vegetariska recept</Link> och veganska alternativ. 
-                Använd våra filter för att hitta <Link href="/kategorier/vegetariska-recept" className="text-purple-600 hover:text-purple-700 underline">vegetarisk mat</Link>, vegansk mat eller 
-                glutenfria recept. Vi visar hur du kan laga näringsrik och god mat utan animaliska produkter, 
-                perfekt för dig som vill äta mer hälsosam mat och plantbaserad kost.
+                Oui ! Nous avons une large sélection de <Link href="/categories/vegetariska-recept" className="text-[#FF7A7A] hover:text-[#6FCF97] underline">recettes végétariennes</Link> et d'options véganes. 
+                Utilisez nos filtres pour trouver des <Link href="/categories/vegetariska-recept" className="text-[#FF7A7A] hover:text-[#6FCF97] underline">plats végétariens</Link>, des plats véganes ou 
+                des recettes sans gluten. Nous montrons comment préparer des plats nutritifs et savoureux sans produits d'origine animale, 
+                parfait pour ceux qui souhaitent manger plus sainement et adopter une alimentation à base de plantes.
               </p>
             </motion.div>
 
@@ -571,14 +571,14 @@ export default function EnhancedHomeClient({
               className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg"
             >
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                Vad gör Bakstundens recept speciella?
+                Qu'est-ce qui rend les recettes de Bonmets spéciales ?
               </h3>
               <p className="text-gray-700 dark:text-gray-300">
-                Alla våra <strong>svenska matrecept</strong> är noggrant testade och innehåller detaljerade 
-                steg-för-steg instruktioner, tydliga ingredienslistor, näringsinformation och 
-                praktiska tips. Vi fokuserar på hemlagad mat med ingredienser du hittar i svenska 
-                mataffärer. Våra recept passar alla nivåer – från nybörjare till erfarna kockar som letar efter nya 
-                matlagningsidéer och bakningsrecept.
+                Toutes nos <strong>recettes françaises</strong> sont soigneusement testées et contiennent des 
+                instructions détaillées étape par étape, des listes d'ingrédients claires, des informations nutritionnelles et 
+                des conseils pratiques. Nous nous concentrons sur la cuisine maison avec des ingrédients que vous trouvez dans les 
+                épiceries françaises. Nos recettes conviennent à tous les niveaux – des débutants aux cuisiniers expérimentés à la recherche de nouvelles 
+                idées culinaires et de recettes de pâtisserie.
               </p>
             </motion.div>
 
@@ -590,14 +590,14 @@ export default function EnhancedHomeClient({
               className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg"
             >
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                Hur kan jag planera min veckomeny?
+                Comment puis-je planifier mon menu de la semaine ?
               </h3>
               <p className="text-gray-700 dark:text-gray-300">
-                Använd våra olika <Link href="/kategorier" className="text-purple-600 hover:text-purple-700 underline">kategorier</Link> för att skapa en varierad veckomeny. Blanda 
-                <Link href="/kategorier/kyckling-recept" className="text-purple-600 hover:text-purple-700 underline">kycklingrecept</Link>, <Link href="/kategorier/lax-recept" className="text-purple-600 hover:text-purple-700 underline">fiskrätter</Link>, <Link href="/kategorier/pasta-recept" className="text-purple-600 hover:text-purple-700 underline">pasta</Link> och 
-                <Link href="/kategorier/vegetariska-recept" className="text-purple-600 hover:text-purple-700 underline">vegetariska middagar</Link> för en balanserad kost. Välj några <Link href="/snabbmat" className="text-purple-600 hover:text-purple-700 underline">snabba vardagsrätter</Link> 
-                för stressiga dagar och planera en mer avancerad helgmiddag när du har mer tid. 
-                Spara dina <Link href="/recept" className="text-purple-600 hover:text-purple-700 underline">favoritrecept</Link> för att enkelt hitta dem igen när du planerar din matlagning.
+                Utilisez nos différentes <Link href="/categories" className="text-[#FF7A7A] hover:text-[#6FCF97] underline">catégories</Link> pour créer un menu hebdomadaire varié. Mélangez 
+                les <Link href="/categories/kyckling-recept" className="text-[#FF7A7A] hover:text-[#6FCF97] underline">recettes de poulet</Link>, les <Link href="/categories/lax-recept" className="text-[#FF7A7A] hover:text-[#6FCF97] underline">plats de poisson</Link>, les <Link href="/categories/pasta-recept" className="text-[#FF7A7A] hover:text-[#6FCF97] underline">pâtes</Link> et 
+                les <Link href="/categories/vegetariska-recept" className="text-[#FF7A7A] hover:text-[#6FCF97] underline">dîners végétariens</Link> pour une alimentation équilibrée. Choisissez quelques <Link href="/plats-rapides" className="text-[#FF7A7A] hover:text-[#6FCF97] underline">plats rapides du quotidien</Link> 
+                pour les jours stressants et planifiez un dîner de week-end plus élaboré quand vous avez plus de temps. 
+                Enregistrez vos <Link href="/recettes" className="text-[#FF7A7A] hover:text-[#6FCF97] underline">recettes favorites</Link> pour les retrouver facilement lors de la planification de vos repas.
               </p>
             </motion.div>
           </div>
@@ -605,12 +605,12 @@ export default function EnhancedHomeClient({
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-600">
+      <section className="py-16 bg-gradient-to-r from-[#FF7A7A] to-[#6FCF97]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Commencez votre aventure culinaire dès aujourd’hui
+            Commencez votre aventure culinaire dès aujourd'hui
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
+          <p className="text-xl text-white/90 mb-8">
             Découvrez plus de {totalRecipes} recettes testées pour tous les goûts et toutes les occasions. 
             Des plats rapides du quotidien aux menus de fête – nous avons les recettes qui 
             rendent votre cuisine plus simple et plus savoureuse.
@@ -618,14 +618,14 @@ export default function EnhancedHomeClient({
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/recettes"
-              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
+              className="bg-white text-[#FF7A7A] px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 hover:text-[#6FCF97] transition-colors inline-flex items-center justify-center"
             >
               Explorer toutes les recettes
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link
               href="/categories"
-              className="bg-purple-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-purple-800 transition-colors inline-flex items-center justify-center border-2 border-white"
+              className="bg-[#6FCF97] text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#5FB87E] transition-colors inline-flex items-center justify-center border-2 border-white"
             >
               Parcourir les catégories
             </Link>

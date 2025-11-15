@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X, Utensils, Clock, Home, Grid3X3 } from 'lucide-react';
-import { getAllCategories, getAllMealTypes } from '@/lib/categories';
+import { getAllCategories } from '@/lib/categories';
 import EnhancedSearchBar from '@/components/ui/EnhancedSearchBar';
 
 export default function Header({ recipes = [] }) {
@@ -14,7 +14,6 @@ export default function Header({ recipes = [] }) {
   const pathname = usePathname();
 
   const allCategories = getAllCategories();
-  const allMealTypes = getAllMealTypes();
 
   const navigationItems = [
     {
@@ -37,11 +36,6 @@ export default function Header({ recipes = [] }) {
         icon: cat.icon,
         description: cat.description
       }))
-    },
-    {
-      label: 'Repas',
-      href: '/repas',
-      icon: Clock
     },
     {
       label: 'Plats rapides',
@@ -70,7 +64,7 @@ export default function Header({ recipes = [] }) {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-gradient-to-r from-[#FF7A7A] to-[#6FCF97] rounded-lg flex items-center justify-center">
                   <Utensils className="w-5 h-5 text-white" />
                 </div>
                 <span className="text-xl font-bold text-gray-900 dark:text-white">
@@ -93,8 +87,8 @@ export default function Header({ recipes = [] }) {
                   href={item.href}
                   className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     isActive(item.href)
-                      ? 'text-purple-600 dark:text-purple-400'
-                      : 'text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400'
+                      ? 'text-[#FF7A7A] dark:text-[#6FCF97]'
+                      : 'text-gray-700 dark:text-gray-300 hover:text-[#FF7A7A] dark:hover:text-[#6FCF97]'
                   }`}
                 >
                   <item.icon className="w-4 h-4" />
@@ -162,8 +156,8 @@ export default function Header({ recipes = [] }) {
                       onClick={() => toggleMobileDropdown(item.label)}
                       className={`flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium ${
                         isActive(item.href)
-                          ? 'text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/20'
-                          : 'text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-gray-50 dark:hover:bg-gray-700'
+                          ? 'text-[#FF7A7A] dark:text-[#6FCF97] bg-[#FF7A7A]/10 dark:bg-[#6FCF97]/20'
+                          : 'text-gray-700 dark:text-gray-300 hover:text-[#FF7A7A] dark:hover:text-[#6FCF97] hover:bg-gray-50 dark:hover:bg-gray-700'
                       }`}
                     >
                       <div className="flex items-center space-x-2">
@@ -179,8 +173,8 @@ export default function Header({ recipes = [] }) {
                       href={item.href}
                       className={`flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium ${
                         isActive(item.href)
-                          ? 'text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/20'
-                          : 'text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-gray-50 dark:hover:bg-gray-700'
+                          ? 'text-[#FF7A7A] dark:text-[#6FCF97] bg-[#FF7A7A]/10 dark:bg-[#6FCF97]/20'
+                          : 'text-gray-700 dark:text-gray-300 hover:text-[#FF7A7A] dark:hover:text-[#6FCF97] hover:bg-gray-50 dark:hover:bg-gray-700'
                       }`}
                       onClick={() => setIsMenuOpen(false)}
                     >
@@ -194,17 +188,17 @@ export default function Header({ recipes = [] }) {
                     <div className="ml-6 space-y-1">
                       <Link
                         href={item.href}
-                        className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm text-purple-600 dark:text-purple-400 font-semibold"
+                        className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm text-[#FF7A7A] dark:text-[#6FCF97] font-semibold"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         <span className="text-sm">📋</span>
-                        <span>Alla {item.label.toLowerCase()}</span>
+                        <span>Tous les {item.label.toLowerCase()}</span>
                       </Link>
                       {item.dropdown.map((dropdownItem) => (
                         <Link
                           key={dropdownItem.href}
                           href={dropdownItem.href}
-                          className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400"
+                          className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm text-gray-600 dark:text-gray-400 hover:text-[#FF7A7A] dark:hover:text-[#6FCF97]"
                           onClick={() => setIsMenuOpen(false)}
                         >
                           <span className="text-sm">{dropdownItem.icon}</span>

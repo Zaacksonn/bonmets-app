@@ -65,10 +65,10 @@ export default function EnhancedRecipeFilter({ filters, onFilterChange, categori
   const activeFiltersCount = getActiveFiltersCount();
 
   const tabs = [
-    { id: 'kategorier', label: 'Kategorier', icon: Utensils },
-    { id: 'tid', label: 'Tid & Svårighet', icon: Clock },
-    { id: 'kost', label: 'Kost & Livsstil', icon: Heart },
-    { id: 'metod', label: 'Tillagningsmetod', icon: Search }
+    { id: 'kategorier', label: 'Catégories', icon: Utensils },
+    { id: 'tid', label: 'Temps & Difficulté', icon: Clock },
+    { id: 'kost', label: 'Régime & Style de vie', icon: Heart },
+    { id: 'metod', label: 'Méthode de cuisson', icon: Search }
   ];
 
   return (
@@ -77,12 +77,12 @@ export default function EnhancedRecipeFilter({ filters, onFilterChange, categori
       <div className="p-4 border-b border-gray-200 dark:border-gray-700">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Filter className="w-5 h-5 text-purple-600" />
+            <Filter className="w-5 h-5 text-[#FF7A7A]" />
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-              Filtrera recept
+              Filtrer les recettes
             </h3>
             {activeFiltersCount > 0 && (
-              <span className="bg-purple-100 text-purple-800 text-xs font-medium px-2 py-1 rounded-full">
+              <span className="bg-[#FF7A7A]/10 text-[#FF7A7A] text-xs font-medium px-2 py-1 rounded-full">
                 {activeFiltersCount}
               </span>
             )}
@@ -93,7 +93,7 @@ export default function EnhancedRecipeFilter({ filters, onFilterChange, categori
                 onClick={clearAllFilters}
                 className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
               >
-                Rensa alla
+                Tout effacer
               </button>
             )}
             <button
@@ -118,7 +118,7 @@ export default function EnhancedRecipeFilter({ filters, onFilterChange, categori
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                     activeTab === tab.id
-                      ? 'bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-300'
+                      ? 'bg-[#FF7A7A]/10 text-[#FF7A7A] dark:bg-[#6FCF97]/20 dark:text-[#6FCF97]'
                       : 'text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700'
                   }`}
                 >
@@ -136,7 +136,7 @@ export default function EnhancedRecipeFilter({ filters, onFilterChange, categori
               <div className="space-y-4">
                 <div>
                   <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-3">
-                    Huvudkategorier
+                    Catégories principales
                   </h4>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
                     {allCategories.map(category => (
@@ -145,7 +145,7 @@ export default function EnhancedRecipeFilter({ filters, onFilterChange, categori
                         onClick={() => handleFilterChange('category', category.slug)}
                         className={`flex items-center gap-2 p-3 rounded-lg text-sm font-medium transition-colors ${
                           filters.category === category.slug
-                            ? 'bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-300'
+                            ? 'bg-[#FF7A7A]/10 text-[#FF7A7A] dark:bg-[#6FCF97]/20 dark:text-[#6FCF97]'
                             : 'bg-gray-50 text-gray-700 hover:bg-gray-100 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
                         }`}
                       >
@@ -158,7 +158,7 @@ export default function EnhancedRecipeFilter({ filters, onFilterChange, categori
 
                 <div>
                   <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-3">
-                    Måltidstyp
+                    Type de repas
                   </h4>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
                     {allMealTypes.map(mealType => (
@@ -167,7 +167,7 @@ export default function EnhancedRecipeFilter({ filters, onFilterChange, categori
                         onClick={() => handleFilterChange('mealType', mealType.key)}
                         className={`flex items-center gap-2 p-3 rounded-lg text-sm font-medium transition-colors ${
                           filters.mealType === mealType.key
-                            ? 'bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-300'
+                            ? 'bg-[#FF7A7A]/10 text-[#FF7A7A] dark:bg-[#6FCF97]/20 dark:text-[#6FCF97]'
                             : 'bg-gray-50 text-gray-700 hover:bg-gray-100 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
                         }`}
                       >
@@ -195,7 +195,7 @@ export default function EnhancedRecipeFilter({ filters, onFilterChange, categori
                         onClick={() => handleFilterChange('timeCategory', timeCategory.key)}
                         className={`flex flex-col items-center gap-1 p-3 rounded-lg text-sm font-medium transition-colors ${
                           filters.timeCategory === timeCategory.key
-                            ? 'bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-300'
+                            ? 'bg-[#FF7A7A]/10 text-[#FF7A7A] dark:bg-[#6FCF97]/20 dark:text-[#6FCF97]'
                             : 'bg-gray-50 text-gray-700 hover:bg-gray-100 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
                         }`}
                       >
@@ -209,7 +209,7 @@ export default function EnhancedRecipeFilter({ filters, onFilterChange, categori
 
                 <div>
                   <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-3">
-                    Svårighetsgrad
+                    Niveau de difficulté
                   </h4>
                   <div className="grid grid-cols-3 gap-2">
                     {difficultyLevels.map(difficulty => (
@@ -218,7 +218,7 @@ export default function EnhancedRecipeFilter({ filters, onFilterChange, categori
                         onClick={() => handleFilterChange('difficulty', difficulty.key)}
                         className={`flex flex-col items-center gap-1 p-3 rounded-lg text-sm font-medium transition-colors ${
                           filters.difficulty === difficulty.key
-                            ? 'bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-300'
+                            ? 'bg-[#FF7A7A]/10 text-[#FF7A7A] dark:bg-[#6FCF97]/20 dark:text-[#6FCF97]'
                             : 'bg-gray-50 text-gray-700 hover:bg-gray-100 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
                         }`}
                       >
@@ -243,7 +243,7 @@ export default function EnhancedRecipeFilter({ filters, onFilterChange, categori
               <div className="space-y-4">
                 <div>
                   <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-3">
-                    Kostpreferenser
+                    Préférences alimentaires
                   </h4>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
                     {allDietaryTags.map(tag => (
@@ -252,7 +252,7 @@ export default function EnhancedRecipeFilter({ filters, onFilterChange, categori
                         onClick={() => handleFilterChange('dietaryTags', tag.key)}
                         className={`flex items-center gap-2 p-3 rounded-lg text-sm font-medium transition-colors ${
                           filters.dietaryTags?.includes(tag.key)
-                            ? 'bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-300'
+                            ? 'bg-[#FF7A7A]/10 text-[#FF7A7A] dark:bg-[#6FCF97]/20 dark:text-[#6FCF97]'
                             : 'bg-gray-50 text-gray-700 hover:bg-gray-100 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
                         }`}
                       >
@@ -265,7 +265,7 @@ export default function EnhancedRecipeFilter({ filters, onFilterChange, categori
 
                 <div>
                   <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-3">
-                    Livsstil
+                    Style de vie
                   </h4>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
                     {allLifestyleTags.map(tag => (
@@ -274,7 +274,7 @@ export default function EnhancedRecipeFilter({ filters, onFilterChange, categori
                         onClick={() => handleFilterChange('lifestyleTags', tag.key)}
                         className={`flex items-center gap-2 p-3 rounded-lg text-sm font-medium transition-colors ${
                           filters.lifestyleTags?.includes(tag.key)
-                            ? 'bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-300'
+                            ? 'bg-[#FF7A7A]/10 text-[#FF7A7A] dark:bg-[#6FCF97]/20 dark:text-[#6FCF97]'
                             : 'bg-gray-50 text-gray-700 hover:bg-gray-100 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
                         }`}
                       >
@@ -292,7 +292,7 @@ export default function EnhancedRecipeFilter({ filters, onFilterChange, categori
               <div className="space-y-4">
                 <div>
                   <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-3">
-                    Tillagningsmetod
+                    Méthode de cuisson
                   </h4>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
                     {allCookingMethods.map(method => (
@@ -301,7 +301,7 @@ export default function EnhancedRecipeFilter({ filters, onFilterChange, categori
                         onClick={() => handleFilterChange('cookingMethod', method.key)}
                         className={`flex items-center gap-2 p-3 rounded-lg text-sm font-medium transition-colors ${
                           filters.cookingMethod === method.key
-                            ? 'bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-300'
+                            ? 'bg-[#FF7A7A]/10 text-[#FF7A7A] dark:bg-[#6FCF97]/20 dark:text-[#6FCF97]'
                             : 'bg-gray-50 text-gray-700 hover:bg-gray-100 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
                         }`}
                       >

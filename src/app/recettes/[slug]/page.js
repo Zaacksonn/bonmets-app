@@ -257,7 +257,7 @@ export default async function RecipePage({ params }) {
           {relatedRecipes.length > 0 && (
             <section className="pt-12 border-t border-gray-200 dark:border-gray-800">
               <div className="text-center mb-12">
-                <div className="inline-block px-4 py-2 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm font-semibold mb-4">
+                <div className="inline-block px-4 py-2 bg-[#FF7A7A]/10 dark:bg-[#6FCF97]/20 text-[#FF7A7A] dark:text-[#6FCF97] rounded-full text-sm font-semibold mb-4">
                   {frontmatter.category}
                 </div>
                 <h2

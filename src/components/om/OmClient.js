@@ -9,52 +9,52 @@ export default function OmClient() {
   const team = [
     {
       name: 'Emma Andersson',
-      role: 'Grundare & Matreceptexpert',
+      role: 'Fondatrice & Experte en recettes',
       image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80',
-      bio: 'Passionerad matälskare med specialitet inom svenska klassiker som köttbullar, pasta och kladdkaka.',
+      bio: 'Passionnée de cuisine spécialisée dans les classiques français comme les quiches, les pâtes et le gâteau au chocolat.',
     },
     {
       name: 'Erik Lindström',
-      role: 'Matutvecklare',
+      role: 'Développeur culinaire',
       image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80',
-      bio: 'Kock med kärlek för moderna matvarianter och kreativa matlagningstekniker.',
+      bio: 'Chef cuisinier avec une passion pour les variantes modernes et les techniques culinaires créatives.',
     },
     {
       name: 'Sara Bergman',
-      role: 'Matreceptexpert',
+      role: 'Experte en recettes',
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80',
-      bio: 'Specialist inom klassiska svenska maträtter och internationella favoriter som pasta och vegetariska rätter.',
+      bio: 'Spécialiste des plats classiques français et des favoris internationaux comme les pâtes et les plats végétariens.',
     },
   ];
 
   const values = [
     {
       icon: Heart,
-      title: 'Passion för mat',
-      description: 'Vi älskar mat och matlagning. Varje recept är noggrant testat och godkänt av vårt team innan vi delar det med dig.',
+      title: 'Passion pour la cuisine',
+      description: 'Nous aimons la cuisine et la gastronomie. Chaque recette est soigneusement testée et approuvée par notre équipe avant de la partager avec vous.',
     },
     {
       icon: Users,
-      title: 'Community först',
-      description: 'Vårt community är hjärtat i allt vi gör. Era frågor, feedback och framgångshistorier inspirerar oss varje dag.',
+      title: 'La communauté d\'abord',
+      description: 'Notre communauté est au cœur de tout ce que nous faisons. Vos questions, commentaires et histoires de succès nous inspirent chaque jour.',
     },
     {
       icon: Target,
-      title: 'Tillgänglighet',
-      description: 'Matlagning ska vara roligt och enkelt för alla. Vi förenklar utan att kompromissa med smak eller kvalitet.',
+      title: 'Accessibilité',
+      description: 'La cuisine doit être amusante et simple pour tous. Nous simplifions sans compromettre le goût ou la qualité.',
     },
     {
       icon: Award,
-      title: 'Kvalitet & äkthet',
-      description: 'Inga genvägar eller trick. Bara äkta matrecept med ingredienser du hittar i vanliga butiker.',
+      title: 'Qualité & authenticité',
+      description: 'Pas de raccourcis ou d\'astuces. Juste de vraies recettes avec des ingrédients que vous trouvez dans les magasins ordinaires.',
     },
   ];
 
   const stats = [
-    { number: '30+', label: 'Provlagade matrecept' },
-    { number: '50K+', label: 'Månatliga läsare' },
-    { number: '4.8', label: 'Genomsnittligt betyg' },
-    { number: '2020', label: 'Grundat år' },
+    { number: '30+', label: 'Recettes testées' },
+    { number: '50K+', label: 'Lecteurs mensuels' },
+    { number: '4.8', label: 'Note moyenne' },
+    { number: '2020', label: 'Année de création' },
   ];
 
   return (
@@ -88,18 +88,18 @@ export default function OmClient() {
               className="inline-flex items-center gap-2 px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full shadow-lg mb-6"
             >
               <Heart className="w-5 h-5 text-[#FF7A7A]" />
-              <span className="text-[#FF7A7A] font-semibold">Välkommen till Bakstunden</span>
+              <span className="text-[#FF7A7A] font-semibold">Bienvenue sur Bonmets</span>
             </motion.div>
 
             <h1 
               className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-[#FF7A7A] via-[#FFA07A] to-[#6FCF97] bg-clip-text text-transparent"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Goda stunder som förenar
+              De bons moments qui rassemblent
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Vi tror på matens kraft att samla människor. Sedan 2020 har vi delat recept, tips och glädje med tusentals matälskare.
+              Nous croyons au pouvoir de la cuisine pour rassembler les gens. Depuis 2020, nous partageons des recettes, des conseils et de la joie avec des milliers de passionnés de cuisine.
             </p>
           </motion.div>
         </div>
@@ -142,7 +142,7 @@ export default function OmClient() {
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
               <Image
                 src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1200&q=80"
-                alt="Bakstunden team cooking"
+                alt="Équipe Bonmets en train de cuisiner"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
@@ -153,24 +153,24 @@ export default function OmClient() {
             <div>
               <div className="inline-block mb-4">
                 <span className="px-4 py-2 bg-[#6FCF97]/10 text-[#6FCF97] rounded-full text-sm font-semibold">
-                  Vår historia
+                  Notre histoire
                 </span>
               </div>
               <h2 
                 className="text-4xl md:text-5xl font-bold mb-6"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
-                Från kök till community
+                De la cuisine à la communauté
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed text-lg">
                 <p>
-                  Bakstunden startades 2020 av tre vänner med en gemensam passion: att göra matlagning roligt, enkelt och tillgängligt för alla.
+                  Bonmets a été créé en 2020 par trois amis avec une passion commune : rendre la cuisine amusante, simple et accessible à tous.
                 </p>
                 <p>
-                  Vi var trötta på komplicerade recept med svåråtkomliga ingredienser och oprecisa instruktioner. Så vi bestämde oss för att skapa något bättre.
+                  Nous étions fatigués des recettes compliquées avec des ingrédients difficiles à trouver et des instructions imprécises. Nous avons donc décidé de créer quelque chose de mieux.
                 </p>
                 <p>
-                  Idag är Bakstunden en plats där över 50 000 matälskare varje månad hittar inspiration, lär sig nya tekniker och delar sina matlagningsfram gångar.
+                  Aujourd'hui, Bonmets est un endroit où plus de 50 000 passionnés de cuisine trouvent chaque mois de l'inspiration, apprennent de nouvelles techniques et partagent leurs succès culinaires.
                 </p>
               </div>
             </div>
@@ -192,10 +192,10 @@ export default function OmClient() {
               className="text-4xl md:text-5xl font-bold mb-4"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Våra värderingar
+              Nos valeurs
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Det här är vad vi står för och vad som driver oss varje dag
+              Voici ce que nous défendons et ce qui nous motive chaque jour
             </p>
           </motion.div>
 
@@ -237,10 +237,10 @@ export default function OmClient() {
               className="text-4xl md:text-5xl font-bold mb-4"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Möt teamet
+              Rencontrez l'équipe
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Passionerade matälskare som arbetar för att ge dig de bästa recepten
+              Des passionnés de cuisine qui travaillent pour vous offrir les meilleures recettes
             </p>
           </motion.div>
 
@@ -289,15 +289,15 @@ export default function OmClient() {
             </div>
             <div className="relative z-10">
               <Mail className="w-12 h-12 mb-4" />
-              <h3 className="text-3xl font-bold mb-3">Få vårt nyhetsbrev</h3>
+              <h3 className="text-3xl font-bold mb-3">Recevez notre newsletter</h3>
               <p className="mb-6 text-white/90">
-                Veckovisa recept, tips och inspiration direkt i din inkorg
+                Recettes hebdomadaires, conseils et inspiration directement dans votre boîte de réception
               </p>
               <Link
                 href="/"
                 className="inline-block px-8 py-4 bg-white text-[#FF7A7A] font-bold rounded-full hover:shadow-xl transition-all"
               >
-                Prenumerera nu
+                S'abonner maintenant
               </Link>
             </div>
           </motion.div>
@@ -315,15 +315,15 @@ export default function OmClient() {
             </div>
             <div className="relative z-10">
               <BookOpen className="w-12 h-12 mb-4" />
-              <h3 className="text-3xl font-bold mb-3">Läs vår blogg</h3>
+              <h3 className="text-3xl font-bold mb-3">Lisez notre blog</h3>
               <p className="mb-6 text-white/90">
-                Guider, tips och tekniker för att bli bättre i köket
+                Guides, conseils et techniques pour devenir meilleur en cuisine
               </p>
               <Link
                 href="/blogg"
                 className="inline-block px-8 py-4 bg-white text-[#6FCF97] font-bold rounded-full hover:shadow-xl transition-all"
               >
-                Utforska bloggen
+                Explorer le blog
               </Link>
             </div>
           </motion.div>
@@ -342,17 +342,17 @@ export default function OmClient() {
           >
             <Sparkles className="w-12 h-12 text-[#FF7A7A] mx-auto mb-4" />
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Redo att börja laga mat?
+              Prêt à commencer à cuisiner ?
             </h2>
             <p className="text-gray-600 text-lg mb-8">
-              Utforska våra hundratals recept och hitta din nästa favorit idag
+              Explorez nos centaines de recettes et trouvez votre prochain favori aujourd'hui
             </p>
             <Link
-              href="/recept"
+              href="/recettes"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#FF7A7A] to-[#FFA07A] text-white font-bold rounded-full hover:shadow-xl transform hover:scale-105 transition-all"
             >
               <ChefHat className="w-5 h-5" />
-              Se alla recept
+              Voir toutes les recettes
             </Link>
           </motion.div>
         </div>
